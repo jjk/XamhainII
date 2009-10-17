@@ -22,3 +22,5 @@
     #import <Foundation/Foundation.h>
     #import <AppKit/AppKit.h>
 #endif
+
+#include <OpenGL/gl.h>

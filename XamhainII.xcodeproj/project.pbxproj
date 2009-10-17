@@ -22,6 +22,11 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0032D326108A30770033FA87 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0032D325108A30770033FA87 /* OpenGL.framework */; };
+		007C512A108A29BE00ED3242 /* Point.h in Headers */ = {isa = PBXBuildFile; fileRef = 007C5126108A29BE00ED3242 /* Point.h */; };
+		007C512B108A29BE00ED3242 /* RandomColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 007C5127108A29BE00ED3242 /* RandomColor.cpp */; };
+		007C512C108A29BE00ED3242 /* RandomColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 007C5128108A29BE00ED3242 /* RandomColor.h */; };
+		007C512D108A29BE00ED3242 /* RandomNumbers.h in Headers */ = {isa = PBXBuildFile; fileRef = 007C5129108A29BE00ED3242 /* RandomNumbers.h */; };
 		00DA7802107A728C0094FCAB /* broad_fill_corner.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 00DA77D6107A728C0094FCAB /* broad_fill_corner.pdf */; };
 		00DA7803107A728C0094FCAB /* broad_fill_DDD.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 00DA77D7107A728C0094FCAB /* broad_fill_DDD.pdf */; };
 		00DA7804107A728C0094FCAB /* broad_fill_DHD.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 00DA77D8107A728C0094FCAB /* broad_fill_DHD.pdf */; };
@@ -79,12 +84,17 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D255AC50486D3F9007BF209 /* XamhainII */;
+			remoteGlobalIDString = 8D255AC50486D3F9007BF209;
 			remoteInfo = XamhainII;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0032D325108A30770033FA87 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		007C5126108A29BE00ED3242 /* Point.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Point.h; path = utility/Point.h; sourceTree = "<group>"; };
+		007C5127108A29BE00ED3242 /* RandomColor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RandomColor.cpp; path = utility/RandomColor.cpp; sourceTree = "<group>"; };
+		007C5128108A29BE00ED3242 /* RandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RandomColor.h; path = utility/RandomColor.h; sourceTree = "<group>"; };
+		007C5129108A29BE00ED3242 /* RandomNumbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RandomNumbers.h; path = utility/RandomNumbers.h; sourceTree = "<group>"; };
 		00DA77D6107A728C0094FCAB /* broad_fill_corner.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = broad_fill_corner.pdf; sourceTree = "<group>"; };
 		00DA77D7107A728C0094FCAB /* broad_fill_DDD.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = broad_fill_DDD.pdf; sourceTree = "<group>"; };
 		00DA77D8107A728C0094FCAB /* broad_fill_DHD.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = broad_fill_DHD.pdf; sourceTree = "<group>"; };
@@ -148,12 +158,24 @@
 			files = (
 				8D255ACE0486D3F9007BF209 /* Cocoa.framework in Frameworks */,
 				8D255ACF0486D3F9007BF209 /* ScreenSaver.framework in Frameworks */,
+				0032D326108A30770033FA87 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		007C5125108A299800ED3242 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				007C5126108A29BE00ED3242 /* Point.h */,
+				007C5127108A29BE00ED3242 /* RandomColor.cpp */,
+				007C5128108A29BE00ED3242 /* RandomColor.h */,
+				007C5129108A29BE00ED3242 /* RandomNumbers.h */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
 		00DA77D5107A728C0094FCAB /* Strokes */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				00DA7833107A72F00094FCAB /* Screen Saving */,
+				007C5125108A299800ED3242 /* Utility */,
 				32DBCFA70370C4F300C91783 /* Other Sources */,
 				089C167CFE841241C02AAC07 /* Resources */,
 				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
@@ -250,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
+				0032D325108A30770033FA87 /* OpenGL.framework */,
 				06F27B2DFFEEEFEF11CA0E56 /* ScreenSaver.framework */,
 			);
 			name = "Linked Frameworks";
@@ -289,6 +313,9 @@
 			files = (
 				8D255AC70486D3F9007BF209 /* XamhainII_Prefix.pch in Headers */,
 				00DA7837107A73320094FCAB /* XamhainView.h in Headers */,
+				007C512A108A29BE00ED3242 /* Point.h in Headers */,
+				007C512C108A29BE00ED3242 /* RandomColor.h in Headers */,
+				007C512D108A29BE00ED3242 /* RandomNumbers.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00DA7838107A73320094FCAB /* XamhainView.m in Sources */,
+				007C512B108A29BE00ED3242 /* RandomColor.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

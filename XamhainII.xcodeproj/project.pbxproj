@@ -23,6 +23,8 @@
 
 /* Begin PBXBuildFile section */
 		0032D326108A30770033FA87 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0032D325108A30770033FA87 /* OpenGL.framework */; };
+		00791844108B081B00156D67 /* XamhainPreferences.mm in Sources */ = {isa = PBXBuildFile; fileRef = 00791842108B081B00156D67 /* XamhainPreferences.mm */; };
+		00791845108B081B00156D67 /* XamhainPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = 00791843108B081B00156D67 /* XamhainPreferences.h */; };
 		007C512A108A29BE00ED3242 /* Point.h in Headers */ = {isa = PBXBuildFile; fileRef = 007C5126108A29BE00ED3242 /* Point.h */; };
 		007C512B108A29BE00ED3242 /* RandomColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 007C5127108A29BE00ED3242 /* RandomColor.cpp */; };
 		007C512C108A29BE00ED3242 /* RandomColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 007C5128108A29BE00ED3242 /* RandomColor.h */; };
@@ -91,6 +93,8 @@
 
 /* Begin PBXFileReference section */
 		0032D325108A30770033FA87 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		00791842108B081B00156D67 /* XamhainPreferences.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = XamhainPreferences.mm; path = "screen saving/XamhainPreferences.mm"; sourceTree = "<group>"; };
+		00791843108B081B00156D67 /* XamhainPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XamhainPreferences.h; path = "screen saving/XamhainPreferences.h"; sourceTree = "<group>"; };
 		007C5126108A29BE00ED3242 /* Point.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Point.h; path = utility/Point.h; sourceTree = "<group>"; };
 		007C5127108A29BE00ED3242 /* RandomColor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RandomColor.cpp; path = utility/RandomColor.cpp; sourceTree = "<group>"; };
 		007C5128108A29BE00ED3242 /* RandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RandomColor.h; path = utility/RandomColor.h; sourceTree = "<group>"; };
@@ -231,6 +235,8 @@
 		00DA7833107A72F00094FCAB /* Screen Saving */ = {
 			isa = PBXGroup;
 			children = (
+				00791842108B081B00156D67 /* XamhainPreferences.mm */,
+				00791843108B081B00156D67 /* XamhainPreferences.h */,
 				00DA7835107A73320094FCAB /* XamhainView.h */,
 				00DA7836107A73320094FCAB /* XamhainView.m */,
 			);
@@ -316,6 +322,7 @@
 				007C512A108A29BE00ED3242 /* Point.h in Headers */,
 				007C512C108A29BE00ED3242 /* RandomColor.h in Headers */,
 				007C512D108A29BE00ED3242 /* RandomNumbers.h in Headers */,
+				00791845108B081B00156D67 /* XamhainPreferences.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +457,7 @@
 			files = (
 				00DA7838107A73320094FCAB /* XamhainView.m in Sources */,
 				007C512B108A29BE00ED3242 /* RandomColor.cpp in Sources */,
+				00791844108B081B00156D67 /* XamhainPreferences.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,6 @@
 //  Arithmetic with coordinates.  BeOS rulez!
 //
-//  Copyright (c) 2001-2009  Jens Kilian
+//  Copyright © 2001-2009  Jens Kilian
 //
 //  This file is part of XamhainII.
 //

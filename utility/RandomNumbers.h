@@ -1,6 +1,6 @@
 //  Utility functions for calculating random numbers.
 //
-//  Copyright (c) 2000-2009  Jens Kilian
+//  Copyright © 2000-2009  Jens Kilian
 //
 //  This file is part of XamhainII.
 //

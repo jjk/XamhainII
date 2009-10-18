@@ -1,7 +1,7 @@
 //  Select a color of random hue, within a given range of lightness,
 //  saturation and transparency.
 //
-//  Copyright (c) 1997-2009  Jens Kilian
+//  Copyright © 1997-2009  Jens Kilian
 //
 //  This file is part of XamhainII.
 //

@@ -24,11 +24,7 @@
 /* Begin PBXBuildFile section */
 		0032D326108A30770033FA87 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0032D325108A30770033FA87 /* OpenGL.framework */; };
 		00791844108B081B00156D67 /* XamhainPreferences.mm in Sources */ = {isa = PBXBuildFile; fileRef = 00791842108B081B00156D67 /* XamhainPreferences.mm */; };
-		00791845108B081B00156D67 /* XamhainPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = 00791843108B081B00156D67 /* XamhainPreferences.h */; };
-		007C512A108A29BE00ED3242 /* Point.h in Headers */ = {isa = PBXBuildFile; fileRef = 007C5126108A29BE00ED3242 /* Point.h */; };
 		007C512B108A29BE00ED3242 /* RandomColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 007C5127108A29BE00ED3242 /* RandomColor.cpp */; };
-		007C512C108A29BE00ED3242 /* RandomColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 007C5128108A29BE00ED3242 /* RandomColor.h */; };
-		007C512D108A29BE00ED3242 /* RandomNumbers.h in Headers */ = {isa = PBXBuildFile; fileRef = 007C5129108A29BE00ED3242 /* RandomNumbers.h */; };
 		00DA7802107A728C0094FCAB /* broad_fill_corner.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 00DA77D6107A728C0094FCAB /* broad_fill_corner.pdf */; };
 		00DA7803107A728C0094FCAB /* broad_fill_DDD.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 00DA77D7107A728C0094FCAB /* broad_fill_DDD.pdf */; };
 		00DA7804107A728C0094FCAB /* broad_fill_DHD.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 00DA77D8107A728C0094FCAB /* broad_fill_DHD.pdf */; };
@@ -73,9 +69,7 @@
 		00DA782B107A728C0094FCAB /* slender_outline_HHH.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 00DA77FF107A728C0094FCAB /* slender_outline_HHH.pdf */; };
 		00DA782C107A728C0094FCAB /* slender_outline_HHV.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 00DA7800107A728C0094FCAB /* slender_outline_HHV.pdf */; };
 		00DA782D107A728C0094FCAB /* slender_outline_HVV.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 00DA7801107A728C0094FCAB /* slender_outline_HVV.pdf */; };
-		00DA7837107A73320094FCAB /* XamhainView.h in Headers */ = {isa = PBXBuildFile; fileRef = 00DA7835107A73320094FCAB /* XamhainView.h */; };
 		00DA7838107A73320094FCAB /* XamhainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DA7836107A73320094FCAB /* XamhainView.m */; };
-		8D255AC70486D3F9007BF209 /* XamhainII_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32DBCFA80370C50100C91783 /* XamhainII_Prefix.pch */; };
 		8D255ACA0486D3F9007BF209 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D255ACE0486D3F9007BF209 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		8D255ACF0486D3F9007BF209 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F27B2DFFEEEFEF11CA0E56 /* ScreenSaver.framework */; };
@@ -317,12 +311,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D255AC70486D3F9007BF209 /* XamhainII_Prefix.pch in Headers */,
-				00DA7837107A73320094FCAB /* XamhainView.h in Headers */,
-				007C512A108A29BE00ED3242 /* Point.h in Headers */,
-				007C512C108A29BE00ED3242 /* RandomColor.h in Headers */,
-				007C512D108A29BE00ED3242 /* RandomNumbers.h in Headers */,
-				00791845108B081B00156D67 /* XamhainPreferences.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

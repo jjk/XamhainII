@@ -26,9 +26,7 @@
 class XamhainPreferences
 {
 public:
-    // This is a singleton class.
-    static const XamhainPreferences &
-    instance(void);
+    XamhainPreferences(void);
 
     // Screen saving preferences.
     int
@@ -93,10 +91,6 @@ public:
     // ### TODO: colors
 
 private:
-    XamhainPreferences(void);
-    XamhainPreferences(const XamhainPreferences &);
-    XamhainPreferences &operator =(const XamhainPreferences &);
-
     id mDefaults;      // actual screen saver defaults
 };
 

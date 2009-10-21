@@ -25,6 +25,8 @@
 		0032D326108A30770033FA87 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0032D325108A30770033FA87 /* OpenGL.framework */; };
 		00791844108B081B00156D67 /* XamhainPreferences.mm in Sources */ = {isa = PBXBuildFile; fileRef = 00791842108B081B00156D67 /* XamhainPreferences.mm */; };
 		007C512B108A29BE00ED3242 /* RandomColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 007C5127108A29BE00ED3242 /* RandomColor.cpp */; };
+		009D8964108E251800A416CF /* Stroke.mm in Sources */ = {isa = PBXBuildFile; fileRef = 009D8962108E251800A416CF /* Stroke.mm */; };
+		009D897C108E28C800A416CF /* StrokeSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 009D897A108E28C800A416CF /* StrokeSet.cpp */; };
 		00DA7802107A728C0094FCAB /* broad_fill_corner.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 00DA77D6107A728C0094FCAB /* broad_fill_corner.pdf */; };
 		00DA7803107A728C0094FCAB /* broad_fill_DDD.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 00DA77D7107A728C0094FCAB /* broad_fill_DDD.pdf */; };
 		00DA7804107A728C0094FCAB /* broad_fill_DHD.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 00DA77D8107A728C0094FCAB /* broad_fill_DHD.pdf */; };
@@ -89,10 +91,14 @@
 		0032D325108A30770033FA87 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		00791842108B081B00156D67 /* XamhainPreferences.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = XamhainPreferences.mm; path = "screen saving/XamhainPreferences.mm"; sourceTree = "<group>"; };
 		00791843108B081B00156D67 /* XamhainPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XamhainPreferences.h; path = "screen saving/XamhainPreferences.h"; sourceTree = "<group>"; };
-		007C5126108A29BE00ED3242 /* Point.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Point.h; path = utility/Point.h; sourceTree = "<group>"; };
+		007C5126108A29BE00ED3242 /* Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Position.h; path = utility/Position.h; sourceTree = "<group>"; };
 		007C5127108A29BE00ED3242 /* RandomColor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RandomColor.cpp; path = utility/RandomColor.cpp; sourceTree = "<group>"; };
 		007C5128108A29BE00ED3242 /* RandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RandomColor.h; path = utility/RandomColor.h; sourceTree = "<group>"; };
 		007C5129108A29BE00ED3242 /* RandomNumbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RandomNumbers.h; path = utility/RandomNumbers.h; sourceTree = "<group>"; };
+		009D8962108E251800A416CF /* Stroke.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Stroke.mm; path = "knot engine/Stroke.mm"; sourceTree = "<group>"; };
+		009D8963108E251800A416CF /* Stroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stroke.h; path = "knot engine/Stroke.h"; sourceTree = "<group>"; };
+		009D897A108E28C800A416CF /* StrokeSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StrokeSet.cpp; path = "knot engine/StrokeSet.cpp"; sourceTree = "<group>"; };
+		009D897B108E28C800A416CF /* StrokeSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StrokeSet.h; path = "knot engine/StrokeSet.h"; sourceTree = "<group>"; };
 		00DA77D6107A728C0094FCAB /* broad_fill_corner.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = broad_fill_corner.pdf; sourceTree = "<group>"; };
 		00DA77D7107A728C0094FCAB /* broad_fill_DDD.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = broad_fill_DDD.pdf; sourceTree = "<group>"; };
 		00DA77D8107A728C0094FCAB /* broad_fill_DHD.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = broad_fill_DHD.pdf; sourceTree = "<group>"; };
@@ -166,12 +172,23 @@
 		007C5125108A299800ED3242 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				007C5126108A29BE00ED3242 /* Point.h */,
+				007C5126108A29BE00ED3242 /* Position.h */,
 				007C5127108A29BE00ED3242 /* RandomColor.cpp */,
 				007C5128108A29BE00ED3242 /* RandomColor.h */,
 				007C5129108A29BE00ED3242 /* RandomNumbers.h */,
 			);
 			name = Utility;
+			sourceTree = "<group>";
+		};
+		009D8961108E24ED00A416CF /* Knot Engine */ = {
+			isa = PBXGroup;
+			children = (
+				009D897A108E28C800A416CF /* StrokeSet.cpp */,
+				009D897B108E28C800A416CF /* StrokeSet.h */,
+				009D8962108E251800A416CF /* Stroke.mm */,
+				009D8963108E251800A416CF /* Stroke.h */,
+			);
+			name = "Knot Engine";
 			sourceTree = "<group>";
 		};
 		00DA77D5107A728C0094FCAB /* Strokes */ = {
@@ -240,6 +257,7 @@
 		089C166AFE841209C02AAC07 /* XamhainII */ = {
 			isa = PBXGroup;
 			children = (
+				009D8961108E24ED00A416CF /* Knot Engine */,
 				00DA7833107A72F00094FCAB /* Screen Saving */,
 				007C5125108A299800ED3242 /* Utility */,
 				32DBCFA70370C4F300C91783 /* Other Sources */,
@@ -446,6 +464,8 @@
 				00DA7838107A73320094FCAB /* XamhainView.m in Sources */,
 				007C512B108A29BE00ED3242 /* RandomColor.cpp in Sources */,
 				00791844108B081B00156D67 /* XamhainPreferences.mm in Sources */,
+				009D8964108E251800A416CF /* Stroke.mm in Sources */,
+				009D897C108E28C800A416CF /* StrokeSet.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

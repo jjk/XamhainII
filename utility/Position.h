@@ -17,25 +17,25 @@
 //  You should have received a copy of the GNU General Public License
 //  along with XamhainII.  If not, see <http://www.gnu.org/licenses/>.
 
-#ifndef POINT_H
-#define POINT_H
+#ifndef POSITION_H
+#define POSITION_H
 
 #include <cmath>
 
 #include <OpenGL/gl.h>
 
-class Point
+class Position  // should be Point, but OS X already defines one
 {
 public:
     GLfloat x;
     GLfloat y;
 
-    Point(void)
+    Position(void)
     {
         // empty
     }
 
-    Point(GLfloat x_, GLfloat y_)
+    Position(GLfloat x_, GLfloat y_)
     : x(x_), y(y_)
     {
         // empty
@@ -43,47 +43,47 @@ public:
 };
 
 // Just the operators we'll use; no need to provide the full set.
-inline Point
-operator +(const Point &p1, const Point &p2)
+inline Position
+operator +(const Position &p1, const Position &p2)
 {
-  return Point(p1.x + p2.x, p1.y + p2.y);
+  return Position(p1.x + p2.x, p1.y + p2.y);
 }
 
-inline Point
-operator -(const Point &p1, const Point &p2)
+inline Position
+operator -(const Position &p1, const Position &p2)
 {
-  return Point(p1.x - p2.x, p1.y - p2.y);
+  return Position(p1.x - p2.x, p1.y - p2.y);
 }
 
-inline Point
-operator *(const Point &p, const GLfloat s)
+inline Position
+operator *(const Position &p, const GLfloat s)
 {
-    return Point(p.x * s, p.y * s);
+    return Position(p.x * s, p.y * s);
 }
 
-inline Point
-operator *(const GLfloat s, const Point &p)
+inline Position
+operator *(const GLfloat s, const Position &p)
 {
-    return Point(p.x * s, p.y * s);
+    return Position(p.x * s, p.y * s);
 }
 
 inline GLfloat
-operator *(const Point &p1, const Point &p2)
+operator *(const Position &p1, const Position &p2)
 {
     return p1.x * p2.x + p1.y * p2.y;
 }
 
-inline Point
-operator *(const GLfloat t[4], const Point &p)
+inline Position
+operator *(const GLfloat t[4], const Position &p)
 {
-    return Point(t[0] * p.x + t[1] * p.y,
+    return Position(t[0] * p.x + t[1] * p.y,
                  t[2] * p.x + t[3] * p.y);
 }
 
 inline GLfloat
-norm(const Point &p)
+norm(const Position &p)
 {
     return sqrt(p * p);
 }
 
-#endif // POINT_H
+#endif // POSITION_H

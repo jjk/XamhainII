@@ -157,7 +157,7 @@ Stroke::~Stroke(void)
 }
 
 void
-Stroke::Draw(Position where, GLfloat size, GLfloat radius, GLfloat angle,
+Stroke::draw(Position where, GLfloat size, GLfloat radius, GLfloat angle,
              const GLint transform[4]) const
 {
     if (radius <= 0.0 || angle <= 0.0) {

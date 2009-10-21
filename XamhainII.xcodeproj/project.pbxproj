@@ -27,6 +27,7 @@
 		007C512B108A29BE00ED3242 /* RandomColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 007C5127108A29BE00ED3242 /* RandomColor.cpp */; };
 		009D8964108E251800A416CF /* Stroke.mm in Sources */ = {isa = PBXBuildFile; fileRef = 009D8962108E251800A416CF /* Stroke.mm */; };
 		009D897C108E28C800A416CF /* StrokeSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 009D897A108E28C800A416CF /* StrokeSet.cpp */; };
+		00D7B656108F8E9A00432E90 /* KnotSection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00D7B654108F8E9A00432E90 /* KnotSection.cpp */; };
 		00DA7802107A728C0094FCAB /* broad_fill_corner.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 00DA77D6107A728C0094FCAB /* broad_fill_corner.pdf */; };
 		00DA7803107A728C0094FCAB /* broad_fill_DDD.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 00DA77D7107A728C0094FCAB /* broad_fill_DDD.pdf */; };
 		00DA7804107A728C0094FCAB /* broad_fill_DHD.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 00DA77D8107A728C0094FCAB /* broad_fill_DHD.pdf */; };
@@ -99,6 +100,8 @@
 		009D8963108E251800A416CF /* Stroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stroke.h; path = "knot engine/Stroke.h"; sourceTree = "<group>"; };
 		009D897A108E28C800A416CF /* StrokeSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StrokeSet.cpp; path = "knot engine/StrokeSet.cpp"; sourceTree = "<group>"; };
 		009D897B108E28C800A416CF /* StrokeSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StrokeSet.h; path = "knot engine/StrokeSet.h"; sourceTree = "<group>"; };
+		00D7B654108F8E9A00432E90 /* KnotSection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = KnotSection.cpp; path = "knot engine/KnotSection.cpp"; sourceTree = "<group>"; };
+		00D7B655108F8E9A00432E90 /* KnotSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KnotSection.h; path = "knot engine/KnotSection.h"; sourceTree = "<group>"; };
 		00DA77D6107A728C0094FCAB /* broad_fill_corner.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = broad_fill_corner.pdf; sourceTree = "<group>"; };
 		00DA77D7107A728C0094FCAB /* broad_fill_DDD.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = broad_fill_DDD.pdf; sourceTree = "<group>"; };
 		00DA77D8107A728C0094FCAB /* broad_fill_DHD.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = broad_fill_DHD.pdf; sourceTree = "<group>"; };
@@ -183,6 +186,8 @@
 		009D8961108E24ED00A416CF /* Knot Engine */ = {
 			isa = PBXGroup;
 			children = (
+				00D7B654108F8E9A00432E90 /* KnotSection.cpp */,
+				00D7B655108F8E9A00432E90 /* KnotSection.h */,
 				009D897A108E28C800A416CF /* StrokeSet.cpp */,
 				009D897B108E28C800A416CF /* StrokeSet.h */,
 				009D8962108E251800A416CF /* Stroke.mm */,
@@ -466,6 +471,7 @@
 				00791844108B081B00156D67 /* XamhainPreferences.mm in Sources */,
 				009D8964108E251800A416CF /* Stroke.mm in Sources */,
 				009D897C108E28C800A416CF /* StrokeSet.cpp in Sources */,
+				00D7B656108F8E9A00432E90 /* KnotSection.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

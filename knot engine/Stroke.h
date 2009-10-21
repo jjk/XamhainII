@@ -38,7 +38,7 @@ public:
     // spanning the given angle; the center of the annulus is assumed to lie
     // at (where.x - radius, where.y).
     void
-    Draw(Position where, GLfloat size, GLfloat radius, GLfloat angle,
+    draw(Position where, GLfloat size, GLfloat radius, GLfloat angle,
          const GLint transform[4]) const;
 
 private:

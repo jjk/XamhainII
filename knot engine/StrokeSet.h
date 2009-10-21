@@ -37,14 +37,14 @@ public:
 
     // Singleton objects which contain strokes for different knot styles.
     static const StrokeSet &
-    BroadFill(void);
+    broadFill(void);
     static const StrokeSet &
-    BroadOutline(void);
+    broadOutline(void);
 
     static const StrokeSet &
-    SlenderFill(void);
+    slenderFill(void);
     static const StrokeSet &
-    SlenderOutline(void);
+    slenderOutline(void);
 
     // Return a Stroke of the given type.
     const Stroke &

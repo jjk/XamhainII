@@ -51,7 +51,7 @@
         return theSet;                                                       \
     }
 
-StaticStrokeSet(BroadFill, broad, fill)
-StaticStrokeSet(BroadOutline, broad, outline)
-StaticStrokeSet(SlenderFill, slender, fill)
-StaticStrokeSet(SlenderOutline, slender, outline)
+StaticStrokeSet(broadFill, broad, fill)
+StaticStrokeSet(broadOutline, broad, outline)
+StaticStrokeSet(slenderFill, slender, fill)
+StaticStrokeSet(slenderOutline, slender, outline)

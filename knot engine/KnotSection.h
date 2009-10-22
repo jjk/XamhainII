@@ -41,7 +41,7 @@
 #include "Position.h"
 class StrokeSet;
 
-enum direction {		// Directions of strokes and sections.
+enum Direction {		// Directions of strokes and sections.
     D = 0,			// diagonal
     H = 1,			// horizontal
     V = 2,			// vertical
@@ -52,21 +52,21 @@ enum direction {		// Directions of strokes and sections.
 enum { BOT, TOP };
 
 class KnotSection {
-    const direction mType, mLT, mRT, mLB, mRB;
+    const Direction mType, mLT, mRT, mLB, mRB;
 
 public:
-    KnotSection(direction tp,
-                direction lt, direction rt, direction lb, direction rb)
+    KnotSection(Direction tp,
+                Direction lt, Direction rt, Direction lb, Direction rb)
     :    mType(tp), mLT(lt), mRT(rt), mLB(lb), mRB(rb)
     {
         // empty
     }
 
-    direction type(void) const        { return mType; }
-    direction leftTop(void) const     { return mLT; }
-    direction rightTop(void) const    { return mRT; }
-    direction leftBottom(void) const  { return mLB; }
-    direction rightBottom(void) const { return mRB; }
+    Direction type(void) const        { return mType; }
+    Direction leftTop(void) const     { return mLT; }
+    Direction rightTop(void) const    { return mRT; }
+    Direction leftBottom(void) const  { return mLB; }
+    Direction rightBottom(void) const { return mRB; }
 
     // Draw the section at the given location and size, using the strokes
     // and colors to determine how it will look.  If radius and angle,

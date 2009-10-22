@@ -58,7 +58,7 @@ namespace
 
     void
     diagonalStroke(
-        direction from, direction to, bool mirror,
+        Direction from, Direction to, bool mirror,
         Position center, GLfloat size, GLfloat radius, GLfloat angle,
         const StrokeSet &strokes, const GLfloat color[4])
     {
@@ -155,7 +155,7 @@ namespace
 
     void
     horizontalStroke(
-        direction from, direction to, bool mirror,
+        Direction from, Direction to, bool mirror,
         Position center, GLfloat size, GLfloat radius, GLfloat angle,
         const StrokeSet &strokes, const GLfloat color[4])
     {
@@ -256,7 +256,7 @@ namespace
 
     void
     verticalStroke(
-        direction from, direction to, bool mirror,
+        Direction from, Direction to, bool mirror,
         Position center, GLfloat size, GLfloat radius, GLfloat angle,
         const StrokeSet &strokes, const GLfloat color[4])
     {

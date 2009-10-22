@@ -25,6 +25,20 @@
 		0032D326108A30770033FA87 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0032D325108A30770033FA87 /* OpenGL.framework */; };
 		00791844108B081B00156D67 /* XamhainPreferences.mm in Sources */ = {isa = PBXBuildFile; fileRef = 00791842108B081B00156D67 /* XamhainPreferences.mm */; };
 		007C512B108A29BE00ED3242 /* RandomColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 007C5127108A29BE00ED3242 /* RandomColor.cpp */; };
+		007ED8661090CD6800B01235 /* CircularKnot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 007ED8581090CD6800B01235 /* CircularKnot.cpp */; };
+		007ED8671090CD6800B01235 /* CircularKnot.h in Headers */ = {isa = PBXBuildFile; fileRef = 007ED8591090CD6800B01235 /* CircularKnot.h */; };
+		007ED8681090CD6800B01235 /* ClosedKnot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 007ED85A1090CD6800B01235 /* ClosedKnot.cpp */; };
+		007ED8691090CD6800B01235 /* ClosedKnot.h in Headers */ = {isa = PBXBuildFile; fileRef = 007ED85B1090CD6800B01235 /* ClosedKnot.h */; };
+		007ED86A1090CD6800B01235 /* HorizontalKnot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 007ED85C1090CD6800B01235 /* HorizontalKnot.cpp */; };
+		007ED86B1090CD6800B01235 /* HorizontalKnot.h in Headers */ = {isa = PBXBuildFile; fileRef = 007ED85D1090CD6800B01235 /* HorizontalKnot.h */; };
+		007ED86C1090CD6800B01235 /* RandomKnot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 007ED85E1090CD6800B01235 /* RandomKnot.cpp */; };
+		007ED86D1090CD6800B01235 /* RandomKnot.h in Headers */ = {isa = PBXBuildFile; fileRef = 007ED85F1090CD6800B01235 /* RandomKnot.h */; };
+		007ED86E1090CD6800B01235 /* RectangularKnot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 007ED8601090CD6800B01235 /* RectangularKnot.cpp */; };
+		007ED86F1090CD6800B01235 /* RectangularKnot.h in Headers */ = {isa = PBXBuildFile; fileRef = 007ED8611090CD6800B01235 /* RectangularKnot.h */; };
+		007ED8701090CD6800B01235 /* TiledKnot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 007ED8621090CD6800B01235 /* TiledKnot.cpp */; };
+		007ED8711090CD6800B01235 /* TiledKnot.h in Headers */ = {isa = PBXBuildFile; fileRef = 007ED8631090CD6800B01235 /* TiledKnot.h */; };
+		007ED8721090CD6800B01235 /* VerticalKnot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 007ED8641090CD6800B01235 /* VerticalKnot.cpp */; };
+		007ED8731090CD6800B01235 /* VerticalKnot.h in Headers */ = {isa = PBXBuildFile; fileRef = 007ED8651090CD6800B01235 /* VerticalKnot.h */; };
 		009D8964108E251800A416CF /* Stroke.mm in Sources */ = {isa = PBXBuildFile; fileRef = 009D8962108E251800A416CF /* Stroke.mm */; };
 		009D897C108E28C800A416CF /* StrokeSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 009D897A108E28C800A416CF /* StrokeSet.cpp */; };
 		00D7B656108F8E9A00432E90 /* KnotSection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00D7B654108F8E9A00432E90 /* KnotSection.cpp */; };
@@ -96,6 +110,20 @@
 		007C5127108A29BE00ED3242 /* RandomColor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RandomColor.cpp; path = utility/RandomColor.cpp; sourceTree = "<group>"; };
 		007C5128108A29BE00ED3242 /* RandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RandomColor.h; path = utility/RandomColor.h; sourceTree = "<group>"; };
 		007C5129108A29BE00ED3242 /* RandomNumbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RandomNumbers.h; path = utility/RandomNumbers.h; sourceTree = "<group>"; };
+		007ED8581090CD6800B01235 /* CircularKnot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CircularKnot.cpp; path = "knot engine/CircularKnot.cpp"; sourceTree = "<group>"; };
+		007ED8591090CD6800B01235 /* CircularKnot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircularKnot.h; path = "knot engine/CircularKnot.h"; sourceTree = "<group>"; };
+		007ED85A1090CD6800B01235 /* ClosedKnot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ClosedKnot.cpp; path = "knot engine/ClosedKnot.cpp"; sourceTree = "<group>"; };
+		007ED85B1090CD6800B01235 /* ClosedKnot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClosedKnot.h; path = "knot engine/ClosedKnot.h"; sourceTree = "<group>"; };
+		007ED85C1090CD6800B01235 /* HorizontalKnot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HorizontalKnot.cpp; path = "knot engine/HorizontalKnot.cpp"; sourceTree = "<group>"; };
+		007ED85D1090CD6800B01235 /* HorizontalKnot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HorizontalKnot.h; path = "knot engine/HorizontalKnot.h"; sourceTree = "<group>"; };
+		007ED85E1090CD6800B01235 /* RandomKnot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RandomKnot.cpp; path = "knot engine/RandomKnot.cpp"; sourceTree = "<group>"; };
+		007ED85F1090CD6800B01235 /* RandomKnot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RandomKnot.h; path = "knot engine/RandomKnot.h"; sourceTree = "<group>"; };
+		007ED8601090CD6800B01235 /* RectangularKnot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RectangularKnot.cpp; path = "knot engine/RectangularKnot.cpp"; sourceTree = "<group>"; };
+		007ED8611090CD6800B01235 /* RectangularKnot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RectangularKnot.h; path = "knot engine/RectangularKnot.h"; sourceTree = "<group>"; };
+		007ED8621090CD6800B01235 /* TiledKnot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TiledKnot.cpp; path = "knot engine/TiledKnot.cpp"; sourceTree = "<group>"; };
+		007ED8631090CD6800B01235 /* TiledKnot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiledKnot.h; path = "knot engine/TiledKnot.h"; sourceTree = "<group>"; };
+		007ED8641090CD6800B01235 /* VerticalKnot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VerticalKnot.cpp; path = "knot engine/VerticalKnot.cpp"; sourceTree = "<group>"; };
+		007ED8651090CD6800B01235 /* VerticalKnot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VerticalKnot.h; path = "knot engine/VerticalKnot.h"; sourceTree = "<group>"; };
 		009D8962108E251800A416CF /* Stroke.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Stroke.mm; path = "knot engine/Stroke.mm"; sourceTree = "<group>"; };
 		009D8963108E251800A416CF /* Stroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stroke.h; path = "knot engine/Stroke.h"; sourceTree = "<group>"; };
 		009D897A108E28C800A416CF /* StrokeSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StrokeSet.cpp; path = "knot engine/StrokeSet.cpp"; sourceTree = "<group>"; };
@@ -186,6 +214,20 @@
 		009D8961108E24ED00A416CF /* Knot Engine */ = {
 			isa = PBXGroup;
 			children = (
+				007ED8581090CD6800B01235 /* CircularKnot.cpp */,
+				007ED8591090CD6800B01235 /* CircularKnot.h */,
+				007ED85A1090CD6800B01235 /* ClosedKnot.cpp */,
+				007ED85B1090CD6800B01235 /* ClosedKnot.h */,
+				007ED85C1090CD6800B01235 /* HorizontalKnot.cpp */,
+				007ED85D1090CD6800B01235 /* HorizontalKnot.h */,
+				007ED85E1090CD6800B01235 /* RandomKnot.cpp */,
+				007ED85F1090CD6800B01235 /* RandomKnot.h */,
+				007ED8601090CD6800B01235 /* RectangularKnot.cpp */,
+				007ED8611090CD6800B01235 /* RectangularKnot.h */,
+				007ED8621090CD6800B01235 /* TiledKnot.cpp */,
+				007ED8631090CD6800B01235 /* TiledKnot.h */,
+				007ED8641090CD6800B01235 /* VerticalKnot.cpp */,
+				007ED8651090CD6800B01235 /* VerticalKnot.h */,
 				00D7B654108F8E9A00432E90 /* KnotSection.cpp */,
 				00D7B655108F8E9A00432E90 /* KnotSection.h */,
 				009D897A108E28C800A416CF /* StrokeSet.cpp */,
@@ -334,6 +376,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				007ED8671090CD6800B01235 /* CircularKnot.h in Headers */,
+				007ED8691090CD6800B01235 /* ClosedKnot.h in Headers */,
+				007ED86B1090CD6800B01235 /* HorizontalKnot.h in Headers */,
+				007ED86D1090CD6800B01235 /* RandomKnot.h in Headers */,
+				007ED86F1090CD6800B01235 /* RectangularKnot.h in Headers */,
+				007ED8711090CD6800B01235 /* TiledKnot.h in Headers */,
+				007ED8731090CD6800B01235 /* VerticalKnot.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +521,13 @@
 				009D8964108E251800A416CF /* Stroke.mm in Sources */,
 				009D897C108E28C800A416CF /* StrokeSet.cpp in Sources */,
 				00D7B656108F8E9A00432E90 /* KnotSection.cpp in Sources */,
+				007ED8661090CD6800B01235 /* CircularKnot.cpp in Sources */,
+				007ED8681090CD6800B01235 /* ClosedKnot.cpp in Sources */,
+				007ED86A1090CD6800B01235 /* HorizontalKnot.cpp in Sources */,
+				007ED86C1090CD6800B01235 /* RandomKnot.cpp in Sources */,
+				007ED86E1090CD6800B01235 /* RectangularKnot.cpp in Sources */,
+				007ED8701090CD6800B01235 /* TiledKnot.cpp in Sources */,
+				007ED8721090CD6800B01235 /* VerticalKnot.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

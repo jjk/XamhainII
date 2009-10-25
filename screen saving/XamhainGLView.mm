@@ -1,4 +1,4 @@
-//  XamhainII screen saver view.
+//  XamhainII OpenGL view.
 //
 //  Copyright © 2009, Jens Kilian.
 //
@@ -17,14 +17,42 @@
 //  You should have received a copy of the GNU General Public License
 //  along with XamhainII.  If not, see <http://www.gnu.org/licenses/>.
 
-#import <ScreenSaver/ScreenSaver.h>
-
 #import "XamhainGLView.h"
 
+#include <OpenGL/gl.h>
 
-@interface XamhainView : ScreenSaverView
+
+@implementation XamhainGLView
+
++ (NSOpenGLPixelFormat *) defaultPixelFormat
 {
-    XamhainGLView *mpGLView;
+    static const NSOpenGLPixelFormatAttribute attributes[] =
+    {
+        NSOpenGLPFADoubleBuffer,
+        NSOpenGLPFADepthSize, 32,
+        0
+    };
+
+    return [[NSOpenGLPixelFormat alloc] initWithAttributes: attributes];
+}
+
+- (void) drawRect: (NSRect)bounds
+{
+    (void)bounds;
+
+    glClearColor(0, 0, 0, 0);
+    glClear(GL_COLOR_BUFFER_BIT);
+
+    glColor3f(1.0f, 0.85f, 0.35f);
+    glBegin(GL_TRIANGLES);
+    {
+        glVertex3f(  0.0,  0.6, 0.0);
+        glVertex3f( -0.2, -0.3, 0.0);
+        glVertex3f(  0.2, -0.3 ,0.0);
+    }
+    glEnd();
+
+    glFlush();
 }
 
 @end

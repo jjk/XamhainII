@@ -33,6 +33,8 @@ public:
     numberOfKnots(void) const;
     bool
     technicolor(void) const;
+    int
+    ticksPerSecond(void) const;
 
     GLfloat
     minSize(void) const;

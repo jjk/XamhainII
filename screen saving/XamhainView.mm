@@ -19,49 +19,36 @@
 
 #import "XamhainView.h"
 
+#import "XamhainGLView.h"
+#include "XamhainPreferences.h"
+
 
 @implementation XamhainView
 
-- (id)initWithFrame:(NSRect)frame isPreview:(BOOL)isPreview
+- (id) initWithFrame: (NSRect)frame isPreview: (BOOL)isPreview
 {
-    self = [super initWithFrame:frame isPreview:isPreview];
+    self = [super initWithFrame: frame isPreview: isPreview];
     if (self) {
-        [self setAnimationTimeInterval:1/30.0];
+        XamhainPreferences prefs;
+        [self setAnimationTimeInterval: 1.0/prefs.ticksPerSecond()];
+
+        mpGLView = [[XamhainGLView alloc] initWithFrame: frame];
+        if (mpGLView) {
+            [self addSubview: mpGLView];
+
+        } else {
+            NSLog(@"Failed to create XamhainGLView.");
+        }
+    } else {
+        NSLog(@"Failed to create XamhainView");
     }
-    
-    phase = 0;
-    
+
     return self;
 }
 
-- (void)startAnimation
+- (void) animateOneFrame
 {
-    [super startAnimation];
-}
-
-- (void)stopAnimation
-{
-    [super stopAnimation];
-}
-
-- (void)drawRect:(NSRect)rect
-{
-    [super drawRect:rect];
-}
-
-- (void)animateOneFrame
-{
-    ++phase;
-
-    [[NSColor colorWithCalibratedHue:(phase % 500) / 500.0
-                          saturation:1.0
-                          brightness:1.0
-                               alpha:1.0] setFill];
-    
-    NSRect bounds = [self bounds];
-    CGFloat d = NSWidth(bounds) / 25.0;
-    bounds = NSInsetRect(bounds, d, d);
-    NSFrameRectWithWidth(bounds, d);
+    [mpGLView setNeedsDisplay: YES];
 }
 
 - (BOOL)hasConfigureSheet
@@ -69,7 +56,7 @@
     return NO;
 }
 
-- (NSWindow*)configureSheet
+- (NSWindow *) configureSheet
 {
     return nil;
 }

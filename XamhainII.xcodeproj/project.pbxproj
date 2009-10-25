@@ -22,6 +22,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		001EA1D7109365FC00D05EFB /* XamhainGLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 001EA1D5109365FC00D05EFB /* XamhainGLView.h */; };
+		001EA1D8109365FC00D05EFB /* XamhainGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 001EA1D6109365FC00D05EFB /* XamhainGLView.mm */; };
 		0032D326108A30770033FA87 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0032D325108A30770033FA87 /* OpenGL.framework */; };
 		00791844108B081B00156D67 /* XamhainPreferences.mm in Sources */ = {isa = PBXBuildFile; fileRef = 00791842108B081B00156D67 /* XamhainPreferences.mm */; };
 		007C512B108A29BE00ED3242 /* RandomColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 007C5127108A29BE00ED3242 /* RandomColor.cpp */; };
@@ -86,7 +88,7 @@
 		00DA782B107A728C0094FCAB /* slender_outline_HHH.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 00DA77FF107A728C0094FCAB /* slender_outline_HHH.pdf */; };
 		00DA782C107A728C0094FCAB /* slender_outline_HHV.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 00DA7800107A728C0094FCAB /* slender_outline_HHV.pdf */; };
 		00DA782D107A728C0094FCAB /* slender_outline_HVV.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 00DA7801107A728C0094FCAB /* slender_outline_HVV.pdf */; };
-		00DA7838107A73320094FCAB /* XamhainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DA7836107A73320094FCAB /* XamhainView.m */; };
+		00DA7838107A73320094FCAB /* XamhainView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 00DA7836107A73320094FCAB /* XamhainView.mm */; };
 		8D255ACA0486D3F9007BF209 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D255ACE0486D3F9007BF209 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		8D255ACF0486D3F9007BF209 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F27B2DFFEEEFEF11CA0E56 /* ScreenSaver.framework */; };
@@ -103,6 +105,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		001EA1D5109365FC00D05EFB /* XamhainGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XamhainGLView.h; path = "screen saving/XamhainGLView.h"; sourceTree = "<group>"; };
+		001EA1D6109365FC00D05EFB /* XamhainGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = XamhainGLView.mm; path = "screen saving/XamhainGLView.mm"; sourceTree = "<group>"; };
 		0032D325108A30770033FA87 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		00791842108B081B00156D67 /* XamhainPreferences.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = XamhainPreferences.mm; path = "screen saving/XamhainPreferences.mm"; sourceTree = "<group>"; };
 		00791843108B081B00156D67 /* XamhainPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XamhainPreferences.h; path = "screen saving/XamhainPreferences.h"; sourceTree = "<group>"; };
@@ -175,7 +179,7 @@
 		00DA7800107A728C0094FCAB /* slender_outline_HHV.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = slender_outline_HHV.pdf; sourceTree = "<group>"; };
 		00DA7801107A728C0094FCAB /* slender_outline_HVV.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = slender_outline_HVV.pdf; sourceTree = "<group>"; };
 		00DA7835107A73320094FCAB /* XamhainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XamhainView.h; path = "screen saving/XamhainView.h"; sourceTree = "<group>"; };
-		00DA7836107A73320094FCAB /* XamhainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XamhainView.m; path = "screen saving/XamhainView.m"; sourceTree = "<group>"; };
+		00DA7836107A73320094FCAB /* XamhainView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = XamhainView.mm; path = "screen saving/XamhainView.mm"; sourceTree = "<group>"; };
 		06F27B2DFFEEEFEF11CA0E56 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = /System/Library/Frameworks/ScreenSaver.framework; sourceTree = "<absolute>"; };
 		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -293,10 +297,12 @@
 		00DA7833107A72F00094FCAB /* Screen Saving */ = {
 			isa = PBXGroup;
 			children = (
+				001EA1D5109365FC00D05EFB /* XamhainGLView.h */,
+				001EA1D6109365FC00D05EFB /* XamhainGLView.mm */,
 				00791842108B081B00156D67 /* XamhainPreferences.mm */,
 				00791843108B081B00156D67 /* XamhainPreferences.h */,
 				00DA7835107A73320094FCAB /* XamhainView.h */,
-				00DA7836107A73320094FCAB /* XamhainView.m */,
+				00DA7836107A73320094FCAB /* XamhainView.mm */,
 			);
 			name = "Screen Saving";
 			sourceTree = "<group>";
@@ -383,6 +389,7 @@
 				007ED86F1090CD6800B01235 /* RectangularKnot.h in Headers */,
 				007ED8711090CD6800B01235 /* TiledKnot.h in Headers */,
 				007ED8731090CD6800B01235 /* VerticalKnot.h in Headers */,
+				001EA1D7109365FC00D05EFB /* XamhainGLView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,7 +522,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00DA7838107A73320094FCAB /* XamhainView.m in Sources */,
+				00DA7838107A73320094FCAB /* XamhainView.mm in Sources */,
 				007C512B108A29BE00ED3242 /* RandomColor.cpp in Sources */,
 				00791844108B081B00156D67 /* XamhainPreferences.mm in Sources */,
 				009D8964108E251800A416CF /* Stroke.mm in Sources */,
@@ -528,6 +535,7 @@
 				007ED86E1090CD6800B01235 /* RectangularKnot.cpp in Sources */,
 				007ED8701090CD6800B01235 /* TiledKnot.cpp in Sources */,
 				007ED8721090CD6800B01235 /* VerticalKnot.cpp in Sources */,
+				001EA1D8109365FC00D05EFB /* XamhainGLView.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -26,7 +26,7 @@
     // empty
 }
 
-+ (NSUserDefaults *)sharedDefaults;
++ (NSUserDefaults *) sharedDefaults;
 
 @end
 
@@ -37,45 +37,45 @@ namespace
 
 @implementation XamhainScreenSaverDefaults
 
-+ (NSUserDefaults *)sharedDefaults
++ (void) initialize
 {
-    @synchronized(self) {
-        if (gpInstance == nil) {
-            gpInstance = [ScreenSaverDefaults defaultsForModuleWithName: @"de.earrame.XamhainII"];
+    gpInstance = [ScreenSaverDefaults defaultsForModuleWithName: @"de.earrame.XamhainII"];
 
-            // Register initial defaults.
-            NSDictionary *factoryDefaults =
-            [NSDictionary dictionaryWithObjectsAndKeys:
-             @"NumberOfKnots",               @"8",
-             @"Technicolor",                 @"YES",
-             @"MinSize",                     @"0.2",
-             @"MaxSize",                     @"0.5",
-             @"MinSpeed",                    @"3.0",
-             @"MaxSpeed",                    @"6.0",
-             @"MinSpin",                     @"1.0",
-             @"MaxSpin",                     @"5.0",
-             @"SkewProbability",             @"0.8",
-             @"SpinProbability",             @"0.8",
-             @"KnotSubdivisions",            @"2",
-             @"HorizontalKnotProbability",   @"0.1",
-             @"VerticalKnotProbability",     @"0.2",
-             @"ClosedKnotProbability",       @"0.5",
-             @"CircularKnotProbability",     @"0.5",
-             @"SectionProbability1",         @"0.06",
-             @"SectionProbability2",         @"0.94",
-             @"CornerProbability1",          @"0.2",
-             @"CornerProbability2",          @"0.8",
-             @"BroadKnotProbability",        @"0.5",
-             @"HollowKnotProbability",       @"0.4",
-             @"SymmetricKnotProbability",    @"0.8",
-             @"HorizontalMirrorProbability", @"0.9",
-             @"VerticalMirrorProbability",   @"0.9",
-             NULL];
+    // Register initial defaults.
+    NSDictionary *factoryDefaults =
+    [NSDictionary dictionaryWithObjectsAndKeys:
+     @"NumberOfKnots",               @"8",
+     @"Technicolor",                 @"YES",
+     @"TicksPerSecond",              @"60",
+     @"MinSize",                     @"0.2",
+     @"MaxSize",                     @"0.5",
+     @"MinSpeed",                    @"3.0",
+     @"MaxSpeed",                    @"6.0",
+     @"MinSpin",                     @"1.0",
+     @"MaxSpin",                     @"5.0",
+     @"SkewProbability",             @"0.8",
+     @"SpinProbability",             @"0.8",
+     @"KnotSubdivisions",            @"2",
+     @"HorizontalKnotProbability",   @"0.1",
+     @"VerticalKnotProbability",     @"0.2",
+     @"ClosedKnotProbability",       @"0.5",
+     @"CircularKnotProbability",     @"0.5",
+     @"SectionProbability1",         @"0.06",
+     @"SectionProbability2",         @"0.94",
+     @"CornerProbability1",          @"0.2",
+     @"CornerProbability2",          @"0.8",
+     @"BroadKnotProbability",        @"0.5",
+     @"HollowKnotProbability",       @"0.4",
+     @"SymmetricKnotProbability",    @"0.8",
+     @"HorizontalMirrorProbability", @"0.9",
+     @"VerticalMirrorProbability",   @"0.9",
+     NULL];
 
-            [gpInstance registerDefaults: factoryDefaults];
-        }
-    }
+    [gpInstance registerDefaults: factoryDefaults];
+}
 
++ (NSUserDefaults *) sharedDefaults
+{
     return gpInstance;
 }
 
@@ -99,6 +99,12 @@ bool
 XamhainPreferences::technicolor(void) const
 {
     return [mDefaults boolForKey: @"Technicolor"];
+}
+
+int
+XamhainPreferences::ticksPerSecond(void) const
+{
+    return [mDefaults integerForKey: @"TicksPerSecond"];
 }
 
 GLfloat

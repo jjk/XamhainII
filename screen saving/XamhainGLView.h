@@ -1,4 +1,4 @@
-//  XamhainII screen saver view.
+//  XamhainII OpenGL view.
 //
 //  Copyright © 2009, Jens Kilian.
 //
@@ -17,14 +17,14 @@
 //  You should have received a copy of the GNU General Public License
 //  along with XamhainII.  If not, see <http://www.gnu.org/licenses/>.
 
-#import <ScreenSaver/ScreenSaver.h>
-
-#import "XamhainGLView.h"
+#import <AppKit/NSOpenGLView.h>
 
 
-@interface XamhainView : ScreenSaverView
+@interface XamhainGLView : NSOpenGLView
 {
-    XamhainGLView *mpGLView;
+    int removethis;
 }
+
+- (void) drawRect: (NSRect)bounds;
 
 @end

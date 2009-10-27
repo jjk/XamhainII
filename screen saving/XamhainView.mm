@@ -32,7 +32,9 @@
         XamhainPreferences prefs;
         [self setAnimationTimeInterval: 1.0/prefs.ticksPerSecond()];
 
-        mpGLView = [[XamhainGLView alloc] initWithFrame: frame];
+        const NSRect childFrame =
+            NSOffsetRect(frame, -frame.origin.x, -frame.origin.y);
+        mpGLView = [[XamhainGLView alloc] initWithFrame: childFrame];
         if (mpGLView) {
             [self addSubview: mpGLView];
 

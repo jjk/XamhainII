@@ -23,7 +23,7 @@
 #include "Stroke.h"
 
 #define StaticStroke(stroke, shape, type) \
-    static const Stroke Stroke_##stroke(#shape "_" #type "_" #stroke ".pdf");
+    static const Stroke Stroke_##stroke(#shape "_" #type "_" #stroke);
 
 #define StaticStrokeSet(name, shape, type)                                   \
     const StrokeSet &                                                        \

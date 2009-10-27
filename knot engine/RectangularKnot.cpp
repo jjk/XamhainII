@@ -21,6 +21,8 @@
 
 #include <cmath>
 #include <algorithm>
+using namespace ::std;
+
 #include <OpenGL/gl.h>
 
 #include "KnotSection.h"
@@ -45,8 +47,8 @@ RectangularKnot::RectangularKnot(int windowWidth, int windowHeight,
     const int sectionHeight =
         (int)(fraction * mWindowHeight / mVSections / yRepeat);
     mEdgeLength =
-        ::std::max(::std::max(sectionWidth, sectionHeight),
-                 (mHollow ? 3 : 1) * kMinEdgeLength);
+        max(max(sectionWidth, sectionHeight),
+            (mHollow ? 3 : 1) * kMinEdgeLength);
 
     // Calculate the remaining properties.
     prepareAnimation(Position(mHSections, mVSections) * mEdgeLength * 0.5,

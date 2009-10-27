@@ -17,12 +17,13 @@
 //  You should have received a copy of the GNU General Public License
 //  along with XamhainII.  If not, see <http://www.gnu.org/licenses/>.
 
+#include "TiledKnot.h"
+
 #include <algorithm>
 #include <cmath>
+using namespace ::std;
 
 #include <OpenGL/gl.h>
-
-#include "TiledKnot.h"
 
 #include "KnotSection.h"
 #include "Position.h"
@@ -93,14 +94,14 @@ TiledKnot::findBounds(Position p0, Position d, GLfloat t[2]) const
                      tt[3]);
 
     // Sort the intersections.
-    ::std::sort(clipH ? (tt + 0) : (tt + 2), clipV ? (tt + 4) : (tt + 2));
+    sort(clipH ? (tt + 0) : (tt + 2), clipV ? (tt + 4) : (tt + 2));
 
     if (clipH && clipV) {
         // Find two intersections on opposite sides of the window.
         const Position midPosition(mWindowWidth * 0.5, mWindowHeight * 0.5);
         const GLfloat tm = (midPosition - p0) * d;
 
-        const GLfloat *const p = ::std::lower_bound(tt + 0, tt + 4, tm);
+        const GLfloat *const p = lower_bound(tt + 0, tt + 4, tm);
 
         if (p > tt + 0 && p < tt + 4) {
             t[0] = p[-1];

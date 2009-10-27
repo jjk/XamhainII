@@ -19,7 +19,11 @@
 
 #include "XamhainPreferences.h"
 
-#import "ScreenSaver/ScreenSaverDefaults.h"
+#include <algorithm>
+using namespace ::std;
+
+#import <ScreenSaver/ScreenSaverDefaults.h>
+
 
 @interface XamhainScreenSaverDefaults
 {
@@ -32,51 +36,51 @@
 
 namespace
 {
-    NSUserDefaults *gpInstance = nil;
+    NSUserDefaults *gInstance = nil;
 }
 
 @implementation XamhainScreenSaverDefaults
 
 + (void) initialize
 {
-    gpInstance = [ScreenSaverDefaults defaultsForModuleWithName: @"de.earrame.XamhainII"];
+    gInstance = [ScreenSaverDefaults defaultsForModuleWithName: @"de.earrame.XamhainII"];
 
     // Register initial defaults.
     NSDictionary *factoryDefaults =
     [NSDictionary dictionaryWithObjectsAndKeys:
-     @"NumberOfKnots",               @"8",
-     @"Technicolor",                 @"YES",
-     @"TicksPerSecond",              @"60",
-     @"MinSize",                     @"0.2",
-     @"MaxSize",                     @"0.5",
-     @"MinSpeed",                    @"3.0",
-     @"MaxSpeed",                    @"6.0",
-     @"MinSpin",                     @"1.0",
-     @"MaxSpin",                     @"5.0",
-     @"SkewProbability",             @"0.8",
-     @"SpinProbability",             @"0.8",
-     @"KnotSubdivisions",            @"2",
-     @"HorizontalKnotProbability",   @"0.1",
-     @"VerticalKnotProbability",     @"0.2",
-     @"ClosedKnotProbability",       @"0.5",
-     @"CircularKnotProbability",     @"0.5",
-     @"SectionProbability1",         @"0.06",
-     @"SectionProbability2",         @"0.94",
-     @"CornerProbability1",          @"0.2",
-     @"CornerProbability2",          @"0.8",
-     @"BroadKnotProbability",        @"0.5",
-     @"HollowKnotProbability",       @"0.4",
-     @"SymmetricKnotProbability",    @"0.8",
-     @"HorizontalMirrorProbability", @"0.9",
-     @"VerticalMirrorProbability",   @"0.9",
+     @"8",    @"NumberOfKnots",
+     @"YES",  @"Technicolor",
+     @"60",   @"TicksPerSecond",
+     @"0.2",  @"MinSize",
+     @"0.5",  @"MaxSize",
+     @"3.0",  @"MinSpeed",
+     @"6.0",  @"MaxSpeed",
+     @"1.0",  @"MinSpin",
+     @"5.0",  @"MaxSpin",
+     @"0.8",  @"SkewProbability",
+     @"0.8",  @"SpinProbability",
+     @"2",    @"KnotSubdivisions",
+     @"0.1",  @"HorizontalKnotProbability",
+     @"0.2",  @"VerticalKnotProbability",
+     @"0.5",  @"ClosedKnotProbability",
+     @"0.5",  @"CircularKnotProbability",
+     @"0.06", @"SectionProbability1",
+     @"0.94", @"SectionProbability2",
+     @"0.2",  @"CornerProbability1",
+     @"0.8",  @"CornerProbability2",
+     @"0.5",  @"BroadKnotProbability",
+     @"0.4",  @"HollowKnotProbability",
+     @"0.8",  @"SymmetricKnotProbability",
+     @"0.9",  @"HorizontalMirrorProbability",
+     @"0.9",  @"VerticalMirrorProbability",
      NULL];
 
-    [gpInstance registerDefaults: factoryDefaults];
+    [gInstance registerDefaults: factoryDefaults];
 }
 
 + (NSUserDefaults *) sharedDefaults
 {
-    return gpInstance;
+    return gInstance;
 }
 
 @end
@@ -92,7 +96,7 @@ XamhainPreferences::XamhainPreferences(void)
 int
 XamhainPreferences::numberOfKnots(void) const
 {
-    return [mDefaults integerForKey: @"NumberOfKnots"];
+    return max((NSInteger)1, [mDefaults integerForKey: @"NumberOfKnots"]);
 }
 
 bool
@@ -104,137 +108,164 @@ XamhainPreferences::technicolor(void) const
 int
 XamhainPreferences::ticksPerSecond(void) const
 {
-    return [mDefaults integerForKey: @"TicksPerSecond"];
+    return max((NSInteger)1, [mDefaults integerForKey: @"TicksPerSecond"]);
 }
 
 GLfloat
 XamhainPreferences::minSize(void) const
 {
-    return [mDefaults floatForKey: @"MinSize"];
+    return min([mDefaults floatForKey: @"MinSize"],
+               [mDefaults floatForKey: @"MaxSize"]);
 }
 
 GLfloat
 XamhainPreferences::maxSize(void) const
 {
-    return [mDefaults floatForKey: @"MaxSize"];
+    return max([mDefaults floatForKey: @"MinSize"],
+               [mDefaults floatForKey: @"MaxSize"]);
 }
 
 GLfloat
 XamhainPreferences::minSpeed(void) const
 {
-    return [mDefaults floatForKey: @"MinSpeed"];
+    return min([mDefaults floatForKey: @"MinSpeed"],
+               [mDefaults floatForKey: @"MaxSpeed"]);
 }
 
 GLfloat
 XamhainPreferences::maxSpeed(void) const
 {
-    return [mDefaults floatForKey: @"MaxSpeed"];
+    return max([mDefaults floatForKey: @"MinSpeed"],
+               [mDefaults floatForKey: @"MaxSpeed"]);
 }
 
 GLfloat
 XamhainPreferences::minSpin(void) const
 {
-    return [mDefaults floatForKey: @"MinSpin"];
+    return min([mDefaults floatForKey: @"MinSpin"],
+               [mDefaults floatForKey: @"MaxSpin"]);
 }
 
 GLfloat
 XamhainPreferences::maxSpin(void) const
 {
-    return [mDefaults floatForKey: @"MaxSpin"];
+    return max([mDefaults floatForKey: @"MinSpin"],
+               [mDefaults floatForKey: @"MaxSpin"]);
 }
 
 GLfloat
 XamhainPreferences::skewProbability(void) const
 {
-    return [mDefaults floatForKey: @"SkewProbability"];
+    return min(max(0.0f, [mDefaults floatForKey: @"SkewProbability"]), 1.0f);
 }
 
 GLfloat
 XamhainPreferences::spinProbability(void) const
 {
-    return [mDefaults floatForKey: @"SpinProbability"];
+    return min(max(0.0f, [mDefaults floatForKey: @"SpinProbability"]), 1.0f);
 }
 
 int
 XamhainPreferences::knotSubdivisions(void) const
 {
-    return [mDefaults integerForKey: @"KnotSubdivisions"];
+    return max((NSInteger)1, [mDefaults integerForKey: @"KnotSubdivisions"]);
 }
 
 GLfloat
 XamhainPreferences::horizontalKnotProbability(void) const
 {
-    return [mDefaults floatForKey: @"HorizontalKnotProbability"];
+    return min(max(0.0f,
+                   [mDefaults floatForKey: @"HorizontalKnotProbability"]
+                   / totalKnotProbability()),
+               1.0f);
 }
 
 GLfloat
 XamhainPreferences::verticalKnotProbability(void) const
 {
-    return [mDefaults floatForKey: @"VerticalKnotProbability"];
+    return min(max(0.0f,
+                   [mDefaults floatForKey: @"VerticalKnotProbability"]
+                   / totalKnotProbability()),
+               1.0f);
 }
 
 GLfloat
 XamhainPreferences::closedKnotProbability(void) const
 {
-    return [mDefaults floatForKey: @"ClosedKnotProbability"];
+    return min(max(0.0f,
+                   [mDefaults floatForKey: @"ClosedKnotProbability"]
+                   / totalKnotProbability()),
+               1.0f);
 }
 
 GLfloat
 XamhainPreferences::circularKnotProbability(void) const
 {
-    return [mDefaults floatForKey: @"CircularKnotProbability"];
+    return min(max(0.0f,
+                   [mDefaults floatForKey: @"CircularKnotProbability"]
+                   / totalKnotProbability()),
+               1.0f);
 }
 
 GLfloat
 XamhainPreferences::sectionProbability1(void) const
 {
-    return [mDefaults floatForKey: @"SectionProbability1"];
+    return min(max(0.0f, [mDefaults floatForKey: @"SectionProbability1"]), 1.0f);
 }
 
 GLfloat
 XamhainPreferences::sectionProbability2(void) const
 {
-    return [mDefaults floatForKey: @"SectionProbability2"];
+    return min(max(0.0f, [mDefaults floatForKey: @"SectionProbability2"]), 1.0f);
 }
 
 GLfloat
 XamhainPreferences::cornerProbability1(void) const
 {
-    return [mDefaults floatForKey: @"CornerProbability1"];
+    return min(max(0.0f, [mDefaults floatForKey: @"CornerProbability1"]), 1.0f);
 }
 
 GLfloat
 XamhainPreferences::cornerProbability2(void) const
 {
-    return [mDefaults floatForKey: @"CornerProbability2"];
+    return min(max(0.0f, [mDefaults floatForKey: @"CornerProbability2"]), 1.0f);
 }
 
 GLfloat
 XamhainPreferences::broadKnotProbability(void) const
 {
-    return [mDefaults floatForKey: @"BroadKnotProbability"];
+    return min(max(0.0f, [mDefaults floatForKey: @"BroadKnotProbability"]), 1.0f);
 }
 
 GLfloat
 XamhainPreferences::hollowKnotProbability(void) const
 {
-    return [mDefaults floatForKey: @"HollowKnotProbability"];
+    return min(max(0.0f, [mDefaults floatForKey: @"HollowKnotProbability"]), 1.0f);
 }
 
 GLfloat
 XamhainPreferences::symmetricKnotProbability(void) const
 {
-    return [mDefaults floatForKey: @"SymmetricKnotProbability"];
+    return min(max(0.0f, [mDefaults floatForKey: @"SymmetricKnotProbability"]), 1.0f);
 }
 
 GLfloat
 XamhainPreferences::horizontalMirrorProbability(void) const
 {
-    return [mDefaults floatForKey: @"HorizontalKnotProbability"];
+    return min(max(0.0f, [mDefaults floatForKey: @"HorizontalMirrorProbability"]), 1.0f);
 }
 
 GLfloat
 XamhainPreferences::verticalMirrorProbability(void) const
 {
-    return [mDefaults floatForKey: @"VerticalKnotProbability"];
+    return min(max(0.0f, [mDefaults floatForKey: @"VerticalMirrorProbability"]), 1.0f);
+}
+
+GLfloat
+XamhainPreferences::totalKnotProbability(void) const
+{
+    return [mDefaults floatForKey: @"HorizontalKnotProbability"]
+    +      [mDefaults floatForKey: @"VerticalKnotProbability"]
+    +      [mDefaults floatForKey: @"ClosedKnotProbability"]
+    +      [mDefaults floatForKey: @"CircularKnotProbability"];
 }

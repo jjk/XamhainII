@@ -93,6 +93,9 @@ public:
     // ### TODO: colors
 
 private:
+    GLfloat
+    totalKnotProbability(void) const;
+
     id mDefaults;      // actual screen saver defaults
 };
 

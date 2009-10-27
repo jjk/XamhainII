@@ -22,6 +22,7 @@
 #include <algorithm>
 #include <cassert>
 #include <cmath>
+using namespace ::std;
 
 #include <OpenGL/gl.h>
 #include <OpenGL/glu.h>
@@ -92,9 +93,13 @@ namespace
     loadImage(const char *const name)
     {
         // Load the (PDF) image.
-        NSImage *image = [NSImage imageNamed:
-                          [NSString stringWithCString: name
-                                             encoding: NSASCIIStringEncoding]];
+        NSBundle *bundle = [NSBundle bundleWithIdentifier: @"de.earrame.XamhainII"];
+        NSString *file =[NSString stringWithCString: name
+                                           encoding: NSASCIIStringEncoding];
+        NSString *path = [bundle pathForResource: file ofType: @"pdf"];
+        assert(path != nil);
+
+        NSImage *image = [[NSImage alloc] initWithContentsOfFile: path];
         assert(image != nil);
 
         // Create a bitmap of the desired size.
@@ -104,10 +109,10 @@ namespace
          pixelsWide: kTextureSize
          pixelsHigh: kTextureSize
          bitsPerSample: 8
-         samplesPerPixel: 1
-         hasAlpha: NO
+         samplesPerPixel: 4
+         hasAlpha: YES
          isPlanar: NO
-         colorSpaceName: NSDeviceWhiteColorSpace
+         colorSpaceName: NSDeviceRGBColorSpace
          bytesPerRow: 0
          bitsPerPixel: 0];
 
@@ -117,8 +122,14 @@ namespace
          [NSGraphicsContext graphicsContextWithBitmapImageRep: bitmap]];
 
         const NSSize size = [image size];
-        [image drawInRect: NSMakeRect(0.0, 0.0, kTextureSize, kTextureSize)
-                 fromRect: NSMakeRect(0.0, 0.0, size.width, size.height)
+        const NSRect srcRect = NSMakeRect(0.0, 0.0, size.width, size.height);
+        const NSRect dstRect = NSMakeRect(0.0, 0.0, kTextureSize, kTextureSize);
+
+        [[NSColor whiteColor] setFill];
+        [NSBezierPath fillRect: dstRect];
+
+        [image drawInRect: dstRect
+                 fromRect: srcRect
                 operation: NSCompositeCopy
                  fraction: 1.0];
 
@@ -129,7 +140,8 @@ namespace
 }
 
 Stroke::Stroke(const char *const name)
-:   mSubdivisions(XamhainPreferences().knotSubdivisions()){
+:   mSubdivisions(XamhainPreferences().knotSubdivisions())
+{
     // Load image resource.
     NSBitmapImageRep *bitmap = loadImage(name);
 
@@ -147,7 +159,7 @@ Stroke::Stroke(const char *const name)
 
     gluBuild2DMipmaps(GL_TEXTURE_2D, kTextureFormat,
                       kTextureSize, kTextureSize,
-                      GL_ALPHA, GL_UNSIGNED_BYTE, [bitmap bitmapData]);
+                      GL_RGBA, GL_UNSIGNED_BYTE, [bitmap bitmapData]);
 }
 
 Stroke::~Stroke(void)

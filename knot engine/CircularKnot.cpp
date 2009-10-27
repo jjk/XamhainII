@@ -21,6 +21,8 @@
 
 #include <cmath>
 #include <algorithm>
+using namespace ::std;
+
 #include <OpenGL/gl.h>
 
 #include "KnotSection.h"
@@ -54,7 +56,7 @@ CircularKnot::CircularKnot(int windowWidth, int windowHeight)
     const GLfloat fraction = randomFloat(mPrefs.minSize(), mPrefs.maxSize());
 
     const GLfloat outRadius =
-        0.5 * fraction * ::std::min(mWindowWidth, mWindowHeight);
+        0.5 * fraction * min(mWindowWidth, mWindowHeight);
     const GLfloat inRadius =
         outRadius * randomFloat(0.25, 0.75);
     const GLfloat midRadius =
@@ -67,10 +69,10 @@ CircularKnot::CircularKnot(int windowWidth, int windowHeight)
         (int)(angle * midRadius / mVSections);
 
     mEdgeLength =
-        ::std::max(::std::max(sectionWidth, sectionHeight),
-                   (mHollow ? 3 : 1) * kMinEdgeLength);
+        max(max(sectionWidth, sectionHeight),
+            (mHollow ? 3 : 1) * kMinEdgeLength);
     mRadius =
-        ::std::max(mVSections / angle, (mHSections+1) * 0.5f) * mEdgeLength;
+        max(mVSections / angle, (mHSections+1) * 0.5f) * mEdgeLength;
 
     // Avoid infelicitous associations.
     if (mSectors == 4) {

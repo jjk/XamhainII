@@ -20,12 +20,14 @@
 #include "HorizontalKnot.h"
 
 #include "KnotSection.h"
+class KnotStyle;
 #include "Position.h"
 #include "TiledKnot.h"
 #include "RandomNumbers.h"
 
-HorizontalKnot::HorizontalKnot(int width, int height)
-:   inherited(width, height, Position(1.0, 0.0))
+HorizontalKnot::HorizontalKnot(const KnotStyle &knotStyle,
+                               int width, int height)
+:   inherited(knotStyle, width, height, Position(1.0, 0.0))
 {
     // Set boundary conditions for a horizontal knot.
 

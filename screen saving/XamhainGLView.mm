@@ -27,6 +27,7 @@ using namespace ::std;
 #include "CircularKnot.h"
 #include "ClosedKnot.h"
 #include "HorizontalKnot.h"
+#include "KnotStyle.h"
 #include "RandomNumbers.h"
 #include "VerticalKnot.h"
 
@@ -55,26 +56,47 @@ namespace
     return [[NSOpenGLPixelFormat alloc] initWithAttributes: attributes];
 }
 
-- (XamhainGLView *) initWithFrame: (NSRect)frame
+- (id) initWithFrame: (NSRect)frame
 {
     self = [super initWithFrame: frame];
     if (self) {
         mpPrefs = new XamhainPreferences;
-        mppKnots = new RandomKnot *[mpPrefs->numberOfKnots()];
-        fill(mppKnots, mppKnots + mpPrefs->numberOfKnots(), (RandomKnot *)0);
+
+        mpSlenderStyle = mpBroadStyle = 0;
+
+        mppKnots = 0;
     }
 
     return self;
 }
 
-- (void) finalize
+- (void) startAnimation
+{
+    mpBroadStyle = new KnotStyle("broad");
+    mpSlenderStyle = new KnotStyle("slender");
+
+    mNumberOfKnots = mpPrefs->numberOfKnots();
+    mppKnots = new RandomKnot *[mNumberOfKnots];
+    fill(mppKnots, mppKnots + mNumberOfKnots, (RandomKnot *)0);
+}
+
+- (void) stopAnimation
 {
     if (mppKnots) {
-        for (int i = 0; i < mpPrefs->numberOfKnots(); ++i) {
+        for (int i = 0; i < mNumberOfKnots; ++i) {
             delete mppKnots[i];
         }
         delete [] mppKnots;
+        mppKnots = 0;
     }
+
+    delete mpSlenderStyle;
+    delete mpBroadStyle;
+    mpSlenderStyle = mpBroadStyle = 0;
+}
+
+- (void) finalize
+{
     delete mpPrefs;
 
     [super finalize];
@@ -82,6 +104,9 @@ namespace
 
 - (void) prepareOpenGL
 {
+    const GLint one = 1;
+    [[self openGLContext] setValues: &one forParameter: NSOpenGLCPSwapInterval];
+
     glClearColor(0.0, 0.0, 0.0, 1.0);
 
     glEnable(GL_BLEND);
@@ -91,10 +116,11 @@ namespace
     glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 }
 
-- (void) drawRect: (NSRect)bounds
+- (void) reshape
 {
-    const int width = bounds.size.width;
-    const int height = bounds.size.height;
+    const NSSize size = [self bounds].size;
+    const int width = size.width;
+    const int height = size.height;
 
     glViewport(0, 0, width, height);
 
@@ -104,46 +130,63 @@ namespace
 
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
+}
+
+- (void) drawRect: (NSRect)dirtyRect
+{
+    (void)dirtyRect;
 
     glClear(GL_COLOR_BUFFER_BIT);
 
-    for (int i = 0; i < mpPrefs->numberOfKnots(); ++i) {
-        if (!mppKnots[i]) {
-            // Determine knot type.
-            KnotType type = kCircular;
-            GLfloat p = randomFloat();
+    if (mppKnots) {
+        const NSSize size = [self bounds].size;
+        const int width = size.width;
+        const int height = size.height;
 
-            if ((p -= mpPrefs->horizontalKnotProbability()) < 0.0) {
-                type = kHorizontal;
-            } else if ((p -= mpPrefs->verticalKnotProbability()) < 0.0) {
-                type = kVertical;
-            } else if ((p -= mpPrefs->closedKnotProbability()) < 0.0) {
-                type = kClosed;
+        for (int i = 0; i < mNumberOfKnots; ++i) {
+            if (!mppKnots[i]) {
+                // Determine knot style.
+                const KnotStyle &style =
+                randomFloat() < mpPrefs->broadKnotProbability()
+                ? *mpBroadStyle
+                : *mpSlenderStyle;
+
+                // Determine knot type.
+                KnotType type = kCircular;
+                GLfloat p = randomFloat();
+
+                if ((p -= mpPrefs->horizontalKnotProbability()) < 0.0) {
+                    type = kHorizontal;
+                } else if ((p -= mpPrefs->verticalKnotProbability()) < 0.0) {
+                    type = kVertical;
+                } else if ((p -= mpPrefs->closedKnotProbability()) < 0.0) {
+                    type = kClosed;
+                }
+
+                switch (type) {
+
+                    case kClosed:
+                        mppKnots[i] = new ClosedKnot(style, width, height);
+                        break;
+
+                    case kCircular:
+                        mppKnots[i] = new CircularKnot(style, width, height);
+                        break;
+
+                    case kHorizontal:
+                        mppKnots[i] = new HorizontalKnot(style, width, height);
+                        break;
+
+                    case kVertical:
+                        mppKnots[i] = new VerticalKnot(style, width, height);
+                        break;
+                }
             }
 
-            switch (type) {
-
-            case kClosed:
-                mppKnots[i] = new ClosedKnot(width, height);
-                break;
-
-            case kCircular:
-                mppKnots[i] = new CircularKnot(width, height);
-                break;
-
-            case kHorizontal:
-                mppKnots[i] = new HorizontalKnot(width, height);
-                break;
-
-            case kVertical:
-                mppKnots[i] = new VerticalKnot(width, height);
-                break;
+            if (!mppKnots[i]->animate()) {
+                delete mppKnots[i];
+                mppKnots[i] = 0;
             }
-        }
-
-        if (!mppKnots[i]->animate()) {
-            delete mppKnots[i];
-            mppKnots[i] = 0;
         }
     }
 

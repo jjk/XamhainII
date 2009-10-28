@@ -33,7 +33,7 @@ using namespace ::std;
 namespace
 {
     // Nominal size of a texture.
-    const GLsizei kTextureSize = 64;
+    const GLsizei kTextureSize = 128;
 
     // Internal texture format.
     const GLenum kTextureFormat = GL_ALPHA4;
@@ -125,14 +125,12 @@ namespace
         const NSRect srcRect = NSMakeRect(0.0, 0.0, size.width, size.height);
         const NSRect dstRect = NSMakeRect(0.0, 0.0, kTextureSize, kTextureSize);
 
-        [[NSColor whiteColor] setFill];
-        [NSBezierPath fillRect: dstRect];
-
         [image drawInRect: dstRect
                  fromRect: srcRect
                 operation: NSCompositeCopy
                  fraction: 1.0];
 
+        [[NSGraphicsContext currentContext] flushGraphics];
         [NSGraphicsContext restoreGraphicsState];
 
         return bitmap;

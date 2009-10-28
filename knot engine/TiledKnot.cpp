@@ -26,6 +26,7 @@ using namespace ::std;
 #include <OpenGL/gl.h>
 
 #include "KnotSection.h"
+class KnotStyle;
 #include "Position.h"
 #include "RandomNumbers.h"
 
@@ -34,8 +35,10 @@ namespace
     int kMaxSections = 6;
 }
 
-TiledKnot::TiledKnot(int windowWidth, int windowHeight, Position tilingDirection)
-:   inherited(windowWidth, windowHeight,
+TiledKnot::TiledKnot(const KnotStyle &knotStyle,
+                     int windowWidth, int windowHeight, Position tilingDirection)
+:   inherited(knotStyle,
+              windowWidth, windowHeight,
               kMaxSections,
               tilingDirection.x ? 4 + randomInteger(4) : 1,
               tilingDirection.y ? 4 + randomInteger(4) : 1),

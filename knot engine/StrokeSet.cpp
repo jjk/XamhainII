@@ -20,38 +20,44 @@
 
 #include "StrokeSet.h"
 
+#include <cassert>
+#include <string>
+using namespace ::std;
+
 #include "Stroke.h"
 
-#define StaticStroke(stroke, shape, type) \
-    static const Stroke Stroke_##stroke(#shape "_" #type "_" #stroke);
+namespace
+{
+    static const string kShape[StrokeSet::NumStrokes] =
+    {
+        "DDD", "DHD", "DHH", "DHV",
+        "HDD", "HDH", "HDV", "HHH", "HHV", "HVV",
+        "corner"
+    };
+}
 
-#define StaticStrokeSet(name, shape, type)                                   \
-    const StrokeSet &                                                        \
-    StrokeSet::name(void)                                                    \
-    {                                                                        \
-        StaticStroke(DDD, shape, type);                                      \
-        StaticStroke(DHD, shape, type);                                      \
-        StaticStroke(DHH, shape, type);                                      \
-        StaticStroke(DHV, shape, type);                                      \
-        StaticStroke(HDD, shape, type);                                      \
-        StaticStroke(HDH, shape, type);                                      \
-        StaticStroke(HDV, shape, type);                                      \
-        StaticStroke(HHH, shape, type);                                      \
-        StaticStroke(HHV, shape, type);                                      \
-        StaticStroke(HVV, shape, type);                                      \
-        StaticStroke(corner, shape, type);                                   \
-                                                                             \
-        static const Stroke *const pStrokes[NumStrokes] = {                  \
-            &Stroke_DDD, &Stroke_DHD, &Stroke_DHH, &Stroke_DHV, &Stroke_HDD, \
-            &Stroke_HDH, &Stroke_HDV, &Stroke_HHH, &Stroke_HHV, &Stroke_HVV, \
-            &Stroke_corner,                                                  \
-        };                                                                   \
-        static const StrokeSet theSet(pStrokes);                             \
-                                                                             \
-        return theSet;                                                       \
+StrokeSet::StrokeSet(const char *const pStyle, const char *const pType)
+:   mPrefix(string(pStyle) + string("_") + string(pType) + string("_"))
+{
+    for (int i = 0; i < NumStrokes; ++i) {
+        mpStrokes[i] = 0;
     }
+}
 
-StaticStrokeSet(broadFill, broad, fill)
-StaticStrokeSet(broadOutline, broad, outline)
-StaticStrokeSet(slenderFill, slender, fill)
-StaticStrokeSet(slenderOutline, slender, outline)
+StrokeSet::~StrokeSet(void)
+{
+    for (int i = 0; i < NumStrokes; ++i) {
+        delete mpStrokes[i];
+    }
+}
+
+const Stroke &
+StrokeSet::operator [](unsigned int index) const
+{
+    assert(index < NumStrokes);
+    if (!mpStrokes[index]) {
+        const string name = mPrefix + kShape[index];
+        mpStrokes[index] = new Stroke(name.c_str());
+    }
+    return *mpStrokes[index];
+}

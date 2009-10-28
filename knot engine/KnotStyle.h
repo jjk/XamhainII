@@ -1,6 +1,6 @@
-//  A class representing a random vertically tileable knot.
+//  Drawing style for a knot, combining fill and outline strokes.
 //
-//  Copyright © 1997-2009  Jens Kilian
+//  Copyright © 2009  Jens Kilian
 //
 //  This file is part of XamhainII.
 //
@@ -17,23 +17,37 @@
 //  You should have received a copy of the GNU General Public License
 //  along with XamhainII.  If not, see <http://www.gnu.org/licenses/>.
 
-#ifndef VERTICALKNOT_H
-#define VERTICALKNOT_H
+#ifndef KNOTSTYLE_H
+#define KNOTSTYLE_H
 
-class KnotStyle;
-#include "TiledKnot.h"
+#include "StrokeSet.h"
 
-class VerticalKnot : public TiledKnot
+class KnotStyle
 {
-    typedef TiledKnot inherited;
 public:
-    VerticalKnot(const KnotStyle &knotStyle,
-                 int windowWidth, int windowHeight);
-    virtual ~VerticalKnot(void);
+    // Create a KnotStyle.
+    KnotStyle(const char *const pName);
+
+    // Inquiry functions.
+    const StrokeSet &
+    outline(void) const
+    {
+        return mOutline;
+    }
+
+    const StrokeSet &
+    fill(void) const
+    {
+        return mFill;
+    }
 
 private:
-    VerticalKnot(const VerticalKnot &orig);
-    VerticalKnot &operator =(VerticalKnot &orig);
+    KnotStyle(const KnotStyle &);
+    KnotStyle &operator =(const KnotStyle &);
+
+    // Data members;
+    const StrokeSet mOutline;
+    const StrokeSet mFill;
 };
 
-#endif // VERTICALKNOT_H
+#endif // KNOTSTYLE_H

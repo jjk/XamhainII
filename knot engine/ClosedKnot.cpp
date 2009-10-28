@@ -24,10 +24,12 @@
 #include <OpenGL/gl.h>
 
 #include "KnotSection.h"
+class KnotStyle;
 #include "Position.h"
 
-ClosedKnot::ClosedKnot(int windowWidth, int windowHeight)
-:   inherited(windowWidth, windowHeight, 12)
+ClosedKnot::ClosedKnot(const KnotStyle &knotStyle,
+                       int windowWidth, int windowHeight)
+:   inherited(knotStyle, windowWidth, windowHeight, 12)
 {
     // Set boundary conditions for a closed knot.
 

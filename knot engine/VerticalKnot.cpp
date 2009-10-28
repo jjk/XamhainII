@@ -20,12 +20,14 @@
 #include "VerticalKnot.h"
 
 #include "KnotSection.h"
+class KnotStyle;
 #include "Position.h"
 #include "TiledKnot.h"
 #include "RandomNumbers.h"
 
-VerticalKnot::VerticalKnot(int width, int height)
-:   inherited(width, height, Position(0.0, 1.0))
+VerticalKnot::VerticalKnot(const KnotStyle &knotStyle,
+                           int width, int height)
+:   inherited(knotStyle, width, height, Position(0.0, 1.0))
 {
     // Set boundary conditions for a vertical knot.
 

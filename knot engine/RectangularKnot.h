@@ -22,6 +22,7 @@
 
 #include <OpenGL/gl.h>
 
+class KnotStyle;
 #include "Position.h"
 #include "RandomKnot.h"
 
@@ -29,8 +30,9 @@ class RectangularKnot : public RandomKnot
 {
     typedef RandomKnot inherited;
 public:
-    RectangularKnot(int windowWidth, int windowHeight,
-             int maxSections, int xRepeat = 1, int yRepeat = 1);
+    RectangularKnot(const KnotStyle &knotStyle,
+                    int windowWidth, int windowHeight,
+                    int maxSections, int xRepeat = 1, int yRepeat = 1);
     virtual ~RectangularKnot(void);
 
 protected:

@@ -25,6 +25,7 @@
 #include <OpenGL/gl.h>
 
 #include "KnotSection.h"
+#include "KnotStyle.h"
 #include "Position.h"
 #include "RandomColor.h"
 #include "RandomNumbers.h"
@@ -73,29 +74,20 @@ namespace
     }
 }
 
-RandomKnot::RandomKnot(int windowWidth, int windowHeight, int maxSections)
+RandomKnot::RandomKnot(const KnotStyle &knotStyle,
+                       int windowWidth, int windowHeight, int maxSections)
 :   mWindowWidth(windowWidth),
     mWindowHeight(windowHeight),
     mHSections(3 + randomInteger(maxSections - 3)),
     mVSections(3 + randomInteger(maxSections - 3)),
-    mpOutlineStrokes(0),
-    mpFillStrokes(0),
+    mOutlineStrokes(knotStyle.outline()),
+    mFillStrokes(knotStyle.fill()),
+    mHollow(randomFloat() < mPrefs.hollowKnotProbability()),
     mpSectionTypes(0),
     mpSectionCorners(0),
     mpColors(0),
     mDisplayList(0)
 {
-    // Determine knot style.
-    if (randomFloat() < mPrefs.broadKnotProbability()) {
-        mpOutlineStrokes = &StrokeSet::broadOutline();
-        mpFillStrokes    = &StrokeSet::broadFill();
-    } else {
-        mpOutlineStrokes = &StrokeSet::slenderOutline();
-        mpFillStrokes    = &StrokeSet::slenderFill();
-    }
-
-    mHollow = randomFloat() < mPrefs.hollowKnotProbability();
-
     // Initialize the knot data.  Derived classes have to establish
     // the proper boundary conditions.
     mpSectionTypes =
@@ -131,8 +123,6 @@ RandomKnot::~RandomKnot(void)
     mpSectionColors[TOP] = 0;
     delete [] mpColors;
     mpColors = 0;
-
-    mpOutlineStrokes = mpFillStrokes = 0;
 
     if (mDisplayList) {
         glDeleteLists(mDisplayList, 1);

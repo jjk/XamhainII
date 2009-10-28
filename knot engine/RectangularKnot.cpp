@@ -26,6 +26,7 @@ using namespace ::std;
 #include <OpenGL/gl.h>
 
 #include "KnotSection.h"
+class KnotStyle;
 #include "Position.h"
 #include "RandomKnot.h"
 #include "RandomNumbers.h"
@@ -36,9 +37,10 @@ namespace
     const int kMinEdgeLength = 10;
 }
 
-RectangularKnot::RectangularKnot(int windowWidth, int windowHeight,
+RectangularKnot::RectangularKnot(const KnotStyle &knotStyle,
+                                 int windowWidth, int windowHeight,
                                  int maxSections, int xRepeat, int yRepeat)
-:   inherited(windowWidth, windowHeight, maxSections)
+:   inherited(knotStyle, windowWidth, windowHeight, maxSections)
 {
     // Calculate dimensions of the knot.
     const GLfloat fraction = randomFloat(mPrefs.minSize(), mPrefs.maxSize());
@@ -82,7 +84,7 @@ RectangularKnot::drawBasicKnot(void) const
 
             section.draw(offset + mEdgeLength*Position(j, (mVSections-1 - i)),
                          mEdgeLength, 0.0, 0.0,
-                         *mpOutlineStrokes, *mpFillStrokes, mHollow,
+                         mOutlineStrokes, mFillStrokes, mHollow,
                          pTopColor, pBotColor, pLTColor, pRBColor);
         }
     }

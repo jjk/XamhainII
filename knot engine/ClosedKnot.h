@@ -22,6 +22,7 @@
 
 #include <OpenGL/gl.h>
 
+class KnotStyle;
 #include "Position.h"
 #include "RectangularKnot.h"
 
@@ -29,7 +30,8 @@ class ClosedKnot : public RectangularKnot
 {
     typedef RectangularKnot inherited;
 public:
-    ClosedKnot(int windowWidth, int windowHeight);
+    ClosedKnot(const KnotStyle &knotStyle,
+               int windowWidth, int windowHeight);
     virtual ~ClosedKnot(void);
 
 private:

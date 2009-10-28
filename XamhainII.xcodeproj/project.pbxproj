@@ -22,6 +22,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		002438561098D6E100E8A351 /* KnotStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 002438541098D6E100E8A351 /* KnotStyle.cpp */; };
 		0032D326108A30770033FA87 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0032D325108A30770033FA87 /* OpenGL.framework */; };
 		00791844108B081B00156D67 /* XamhainPreferences.mm in Sources */ = {isa = PBXBuildFile; fileRef = 00791842108B081B00156D67 /* XamhainPreferences.mm */; };
 		007C512B108A29BE00ED3242 /* RandomColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 007C5127108A29BE00ED3242 /* RandomColor.cpp */; };
@@ -99,6 +100,8 @@
 /* Begin PBXFileReference section */
 		001EA1D5109365FC00D05EFB /* XamhainGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XamhainGLView.h; path = "screen saving/XamhainGLView.h"; sourceTree = "<group>"; };
 		001EA1D6109365FC00D05EFB /* XamhainGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = XamhainGLView.mm; path = "screen saving/XamhainGLView.mm"; sourceTree = "<group>"; };
+		002438531098D6E100E8A351 /* KnotStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KnotStyle.h; path = "knot engine/KnotStyle.h"; sourceTree = "<group>"; };
+		002438541098D6E100E8A351 /* KnotStyle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = KnotStyle.cpp; path = "knot engine/KnotStyle.cpp"; sourceTree = "<group>"; };
 		0032D325108A30770033FA87 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		00791842108B081B00156D67 /* XamhainPreferences.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = XamhainPreferences.mm; path = "screen saving/XamhainPreferences.mm"; sourceTree = "<group>"; };
 		00791843108B081B00156D67 /* XamhainPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XamhainPreferences.h; path = "screen saving/XamhainPreferences.h"; sourceTree = "<group>"; };
@@ -210,6 +213,8 @@
 		009D8961108E24ED00A416CF /* Knot Engine */ = {
 			isa = PBXGroup;
 			children = (
+				002438531098D6E100E8A351 /* KnotStyle.h */,
+				002438541098D6E100E8A351 /* KnotStyle.cpp */,
 				007ED8581090CD6800B01235 /* CircularKnot.cpp */,
 				007ED8591090CD6800B01235 /* CircularKnot.h */,
 				007ED85A1090CD6800B01235 /* ClosedKnot.cpp */,
@@ -520,6 +525,7 @@
 				007ED8701090CD6800B01235 /* TiledKnot.cpp in Sources */,
 				007ED8721090CD6800B01235 /* VerticalKnot.cpp in Sources */,
 				00D188B11094BA31004E4496 /* XamhainGLView.mm in Sources */,
+				002438561098D6E100E8A351 /* KnotStyle.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

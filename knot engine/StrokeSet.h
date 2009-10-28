@@ -21,9 +21,9 @@
 #ifndef STROKESET_H
 #define STROKESET_H
 
-#include <cassert>
+#include <string>
 
-#include "Stroke.h"
+class Stroke;
 
 class StrokeSet {
 public:
@@ -35,38 +35,23 @@ public:
         NumStrokes
     };
 
-    // Singleton objects which contain strokes for different knot styles.
-    static const StrokeSet &
-    broadFill(void);
-    static const StrokeSet &
-    broadOutline(void);
+    // Construct a set of strokes of a given style and type.
+    StrokeSet(const char *const pStyle, const char *const pType);
 
-    static const StrokeSet &
-    slenderFill(void);
-    static const StrokeSet &
-    slenderOutline(void);
+    // Destroy the StrokeSet.
+    ~StrokeSet(void);
 
     // Return a Stroke of the given type.
     const Stroke &
-    operator [](unsigned int index) const
-    {
-        assert(index < NumStrokes);
-        return *mppStrokes[index];
-    }
+    operator [](unsigned int index) const;
 
 private:
-    // Construct from an array of Stroke objects.
-    StrokeSet(const Stroke *const pStrokes[NumStrokes])
-    : mppStrokes(pStrokes)
-    {
-        // empty
-    }
-
     StrokeSet(const StrokeSet &);
     StrokeSet &operator =(const StrokeSet &);
 
     // Data members.
-    const Stroke *const *const mppStrokes;
+    const ::std::string mPrefix;
+    mutable const Stroke *mpStrokes[NumStrokes];
 };
 
 #endif // STROKESET_H

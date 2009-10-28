@@ -20,13 +20,15 @@
 #ifndef HORIZONTALKNOT_H
 #define HORIZONTALKNOT_H
 
+class KnotStyle;
 #include "TiledKnot.h"
 
 class HorizontalKnot : public TiledKnot
 {
     typedef TiledKnot inherited;
 public:
-    HorizontalKnot(int windowWidth, int windowHeight);
+    HorizontalKnot(const KnotStyle &knotStyle,
+                   int windowWidth, int windowHeight);
     virtual ~HorizontalKnot(void);
 
 private:

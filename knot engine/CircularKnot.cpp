@@ -26,6 +26,7 @@ using namespace ::std;
 #include <OpenGL/gl.h>
 
 #include "KnotSection.h"
+class KnotStyle;
 #include "Position.h"
 #include "RandomKnot.h"
 #include "RandomNumbers.h"
@@ -36,8 +37,9 @@ namespace
     const int kMinEdgeLength = 10;
 }
 
-CircularKnot::CircularKnot(int windowWidth, int windowHeight)
-:   inherited(windowWidth, windowHeight, 6),
+CircularKnot::CircularKnot(const KnotStyle &knotStyle,
+                           int windowWidth, int windowHeight)
+:   inherited(knotStyle, windowWidth, windowHeight, 6),
     mSectors(3 + randomInteger(5))
 {
     // Set boundary conditions.
@@ -119,7 +121,7 @@ CircularKnot::drawBasicKnot(void) const
                 const GLfloat *pRBColor  = rightBottomCornerColor(j, i);
 
                 section.draw(Position(0.0, 0.0), mEdgeLength, radius, angle,
-                             *mpOutlineStrokes, *mpFillStrokes, mHollow,
+                             mOutlineStrokes, mFillStrokes, mHollow,
                              pTopColor, pBotColor, pLTColor, pRBColor);
             }
             glPopMatrix();

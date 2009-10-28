@@ -48,12 +48,24 @@
     return self;
 }
 
+- (void) startAnimation
+{
+    [super startAnimation];
+    [mpGLView startAnimation];
+}
+
+- (void) stopAnimation
+{
+    [super stopAnimation];
+    [mpGLView stopAnimation];
+}
+
 - (void) animateOneFrame
 {
     [mpGLView setNeedsDisplay: YES];
 }
 
-- (BOOL)hasConfigureSheet
+- (BOOL) hasConfigureSheet
 {
     return NO;
 }

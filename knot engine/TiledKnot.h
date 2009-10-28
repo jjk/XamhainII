@@ -22,6 +22,7 @@
 
 #include <OpenGL/gl.h>
 
+class KnotStyle;
 #include "Position.h"
 #include "RectangularKnot.h"
 
@@ -29,7 +30,8 @@ class TiledKnot : public RectangularKnot
 {
     typedef RectangularKnot inherited;
 public:
-    TiledKnot(int windowWidth, int windowHeight, Position tilingDirection);
+    TiledKnot(const KnotStyle &knotStyle,
+              int windowWidth, int windowHeight, Position tilingDirection);
     virtual ~TiledKnot(void);
 
 private:

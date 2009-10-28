@@ -19,6 +19,7 @@
 
 #import <AppKit/NSOpenGLView.h>
 
+class KnotStyle;
 class RandomKnot;
 class XamhainPreferences;
 
@@ -26,7 +27,15 @@ class XamhainPreferences;
 @interface XamhainGLView : NSOpenGLView
 {
     XamhainPreferences *mpPrefs; // user defaults
-    RandomKnot **mppKnots;       // knots being animated
+
+    KnotStyle *mpBroadStyle;     // knot styles
+    KnotStyle *mpSlenderStyle;
+
+    int mNumberOfKnots;          // knots being animated
+    RandomKnot **mppKnots;
 }
+
+- (void) startAnimation;
+- (void) stopAnimation;
 
 @end

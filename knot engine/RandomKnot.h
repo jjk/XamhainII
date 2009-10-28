@@ -23,6 +23,7 @@
 #include <OpenGL/gl.h>
 
 #include "KnotSection.h"
+class KnotStyle;
 #include "Position.h"
 #include "RandomColor.h"
 class StrokeSet;
@@ -31,7 +32,8 @@ class StrokeSet;
 class RandomKnot
 {
 public:
-    RandomKnot(int windowWidth, int windowHeight, int maxSections);
+    RandomKnot(const KnotStyle &knotStyle,
+               int windowWidth, int windowHeight, int maxSections);
     virtual ~RandomKnot(void);
 
     // Perform a single animation cycle; return 'false' when finished.
@@ -111,16 +113,14 @@ protected:
     }
 
     // Data members.
+    XamhainPreferences mPrefs;         // user preferences
     const int mWindowWidth;            // window size
     const int mWindowHeight;
     const int mHSections;              // horizontal #sections
     const int mVSections;              // vertical #sections
-    const StrokeSet *mpOutlineStrokes; // knot properties
-    const StrokeSet *mpFillStrokes;
+    const StrokeSet &mOutlineStrokes;  // knot properties
+    const StrokeSet &mFillStrokes;
     bool mHollow;
-
-protected:
-    XamhainPreferences mPrefs;   // user preferences
 
 private:
     RandomKnot(const RandomKnot &orig);

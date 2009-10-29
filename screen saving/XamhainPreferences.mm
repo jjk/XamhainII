@@ -45,35 +45,13 @@ namespace
 {
     gInstance = [ScreenSaverDefaults defaultsForModuleWithName: @"de.earrame.XamhainII"];
 
-    // Register initial defaults.
-    NSDictionary *factoryDefaults =
-    [NSDictionary dictionaryWithObjectsAndKeys:
-     @"8",    @"NumberOfKnots",
-     @"YES",  @"Technicolor",
-     @"60",   @"TicksPerSecond",
-     @"0.2",  @"MinSize",
-     @"0.5",  @"MaxSize",
-     @"3.0",  @"MinSpeed",
-     @"6.0",  @"MaxSpeed",
-     @"1.0",  @"MinSpin",
-     @"5.0",  @"MaxSpin",
-     @"0.8",  @"SkewProbability",
-     @"0.8",  @"SpinProbability",
-     @"2",    @"KnotSubdivisions",
-     @"0.1",  @"HorizontalKnotProbability",
-     @"0.2",  @"VerticalKnotProbability",
-     @"0.5",  @"ClosedKnotProbability",
-     @"0.5",  @"CircularKnotProbability",
-     @"0.06", @"SectionProbability1",
-     @"0.94", @"SectionProbability2",
-     @"0.2",  @"CornerProbability1",
-     @"0.8",  @"CornerProbability2",
-     @"0.5",  @"BroadKnotProbability",
-     @"0.4",  @"HollowKnotProbability",
-     @"0.8",  @"SymmetricKnotProbability",
-     @"0.9",  @"HorizontalMirrorProbability",
-     @"0.9",  @"VerticalMirrorProbability",
-     NULL];
+    // Load initial defaults and register them.
+    NSBundle *bundle = [NSBundle bundleWithIdentifier: @"de.earrame.XamhainII"];
+    NSString *path = [bundle pathForResource: @"defaults" ofType: @"plist"];
+    assert(path != nil);
+
+    NSDictionary *factoryDefaults = [NSDictionary dictionaryWithContentsOfFile: path];
+    assert(factoryDefaults != nil);
 
     [gInstance registerDefaults: factoryDefaults];
 }

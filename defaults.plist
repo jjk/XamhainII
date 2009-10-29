@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BroadKnotProbability</key>
+	<real>0.5</real>
+	<key>CircularKnotProbability</key>
+	<real>0.5</real>
+	<key>ClosedKnotProbability</key>
+	<real>0.5</real>
+	<key>CornerProbability1</key>
+	<real>0.2</real>
+	<key>CornerProbability2</key>
+	<real>0.8</real>
+	<key>HollowKnotProbability</key>
+	<real>0.4</real>
+	<key>HorizontalKnotProbability</key>
+	<real>0.1</real>
+	<key>HorizontalMirrorProbability</key>
+	<real>0.9</real>
+	<key>KnotSubdivisions</key>
+	<integer>2</integer>
+	<key>MaxSize</key>
+	<real>0.5</real>
+	<key>MaxSpeed</key>
+	<real>6.0</real>
+	<key>MaxSpin</key>
+	<real>5.0</real>
+	<key>MinSize</key>
+	<real>0.2</real>
+	<key>MinSpeed</key>
+	<real>3.0</real>
+	<key>MinSpin</key>
+	<real>1.0</real>
+	<key>NumberOfKnots</key>
+	<integer>8</integer>
+	<key>SectionProbability1</key>
+	<real>0.06</real>
+	<key>SectionProbability2</key>
+	<real>0.94</real>
+	<key>SkewProbability</key>
+	<real>0.8</real>
+	<key>SpinProbability</key>
+	<real>0.8</real>
+	<key>SymmetricKnotProbability</key>
+	<real>0.8</real>
+	<key>Technicolor</key>
+	<true/>
+	<key>TicksPerSecond</key>
+	<integer>60</integer>
+	<key>VerticalKnotProbability</key>
+	<real>0.2</real>
+	<key>VerticalMirrorProbability</key>
+	<real>0.9</real>
+</dict>
+</plist>

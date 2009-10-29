@@ -24,6 +24,7 @@
 /* Begin PBXBuildFile section */
 		002438561098D6E100E8A351 /* KnotStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 002438541098D6E100E8A351 /* KnotStyle.cpp */; };
 		0032D326108A30770033FA87 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0032D325108A30770033FA87 /* OpenGL.framework */; };
+		00790DBF10996796007ABF04 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = 00790DBE10996796007ABF04 /* COPYING */; };
 		00791844108B081B00156D67 /* XamhainPreferences.mm in Sources */ = {isa = PBXBuildFile; fileRef = 00791842108B081B00156D67 /* XamhainPreferences.mm */; };
 		007C512B108A29BE00ED3242 /* RandomColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 007C5127108A29BE00ED3242 /* RandomColor.cpp */; };
 		007ED8661090CD6800B01235 /* CircularKnot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 007ED8581090CD6800B01235 /* CircularKnot.cpp */; };
@@ -33,6 +34,7 @@
 		007ED86E1090CD6800B01235 /* RectangularKnot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 007ED8601090CD6800B01235 /* RectangularKnot.cpp */; };
 		007ED8701090CD6800B01235 /* TiledKnot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 007ED8621090CD6800B01235 /* TiledKnot.cpp */; };
 		007ED8721090CD6800B01235 /* VerticalKnot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 007ED8641090CD6800B01235 /* VerticalKnot.cpp */; };
+		00926762109A0BF600B2EF52 /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00926761109A0BF600B2EF52 /* defaults.plist */; };
 		009D8964108E251800A416CF /* Stroke.mm in Sources */ = {isa = PBXBuildFile; fileRef = 009D8962108E251800A416CF /* Stroke.mm */; };
 		009D897C108E28C800A416CF /* StrokeSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 009D897A108E28C800A416CF /* StrokeSet.cpp */; };
 		00D188B11094BA31004E4496 /* XamhainGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 001EA1D6109365FC00D05EFB /* XamhainGLView.mm */; };
@@ -103,6 +105,7 @@
 		002438531098D6E100E8A351 /* KnotStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KnotStyle.h; path = "knot engine/KnotStyle.h"; sourceTree = "<group>"; };
 		002438541098D6E100E8A351 /* KnotStyle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = KnotStyle.cpp; path = "knot engine/KnotStyle.cpp"; sourceTree = "<group>"; };
 		0032D325108A30770033FA87 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		00790DBE10996796007ABF04 /* COPYING */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = COPYING; sourceTree = "<group>"; };
 		00791842108B081B00156D67 /* XamhainPreferences.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = XamhainPreferences.mm; path = "screen saving/XamhainPreferences.mm"; sourceTree = "<group>"; };
 		00791843108B081B00156D67 /* XamhainPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XamhainPreferences.h; path = "screen saving/XamhainPreferences.h"; sourceTree = "<group>"; };
 		007C5126108A29BE00ED3242 /* Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Position.h; path = utility/Position.h; sourceTree = "<group>"; };
@@ -123,6 +126,7 @@
 		007ED8631090CD6800B01235 /* TiledKnot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiledKnot.h; path = "knot engine/TiledKnot.h"; sourceTree = "<group>"; };
 		007ED8641090CD6800B01235 /* VerticalKnot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VerticalKnot.cpp; path = "knot engine/VerticalKnot.cpp"; sourceTree = "<group>"; };
 		007ED8651090CD6800B01235 /* VerticalKnot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VerticalKnot.h; path = "knot engine/VerticalKnot.h"; sourceTree = "<group>"; };
+		00926761109A0BF600B2EF52 /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defaults.plist; sourceTree = "<group>"; };
 		009D8962108E251800A416CF /* Stroke.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Stroke.mm; path = "knot engine/Stroke.mm"; sourceTree = "<group>"; };
 		009D8963108E251800A416CF /* Stroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stroke.h; path = "knot engine/Stroke.h"; sourceTree = "<group>"; };
 		009D897A108E28C800A416CF /* StrokeSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StrokeSet.cpp; path = "knot engine/StrokeSet.cpp"; sourceTree = "<group>"; };
@@ -330,6 +334,8 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				00926761109A0BF600B2EF52 /* defaults.plist */,
+				00790DBE10996796007ABF04 /* COPYING */,
 				00DA77D5107A728C0094FCAB /* Strokes */,
 				8D255AD20486D3F9007BF209 /* Info.plist */,
 				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
@@ -473,6 +479,8 @@
 				00DA782B107A728C0094FCAB /* slender_outline_HHH.pdf in Resources */,
 				00DA782C107A728C0094FCAB /* slender_outline_HHV.pdf in Resources */,
 				00DA782D107A728C0094FCAB /* slender_outline_HVV.pdf in Resources */,
+				00790DBF10996796007ABF04 /* COPYING in Resources */,
+				00926762109A0BF600B2EF52 /* defaults.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,13 +504,14 @@
 			);
 			inputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/XamhainII.saver",
+				"$(SRCROOT)/COPYING",
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/XamhainII.dmg",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Thanks to Rob Mayoff for explaining how to do this.\n# See http://qwan.org/2007/05/22/using-xcode-to-build-a-disk-image-and-upload-a-web-site/\n\nset -ex\n\n[ \"$ACTION\" = build ] || exit 0\n[ \"$BUILD_VARIANTS\" = \"normal\" ] || exit 0\n\ndir=\"$TEMP_FILES_DIR/disk\"\ndmg=\"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.dmg\"\n\nrm -rf \"$dir\"\nmkdir \"$dir\"\ncp -R \"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.saver\" \"$dir\"\nrm -f \"$dmg\"\nhdiutil create -srcfolder \"$dir\" -volname \"$PROJECT_NAME\" \"$dmg\"\nhdiutil internet-enable -yes \"$dmg\"\nrm -rf \"$dir\"\n";
+			shellScript = "# Thanks to Rob Mayoff for explaining how to do this.\n# See http://qwan.org/2007/05/22/using-xcode-to-build-a-disk-image-and-upload-a-web-site/\n\nset -ex\n\n[ \"$ACTION\" = build ] || exit 0\n[ \"$BUILD_VARIANTS\" = \"normal\" ] || exit 0\n\ndir=\"$TEMP_FILES_DIR/disk\"\ndmg=\"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.dmg\"\n\nrm -rf \"$dir\"\nmkdir \"$dir\"\ncp -R \"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.saver\" \"$dir\"\ncp -R \"$SRCROOT/COPYING\" \"$dir\"\nrm -f \"$dmg\"\nhdiutil create -srcfolder \"$dir\" -volname \"$PROJECT_NAME\" \"$dmg\"\nhdiutil internet-enable -yes \"$dmg\"\nrm -rf \"$dir\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

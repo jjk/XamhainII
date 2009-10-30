@@ -1,0 +1,12 @@
+On a night in the lonesome October…
+
+In 1997 I wrote the first version of this screensaver for the BeOS.
+It was called “Samhain” because of the Celtic theme, and because it was
+released shortly before Halloween.
+
+In the twelve years since then, I ported it to X11 (renaming it “Xamhain”)
+and later to OpenGL (involving a massive rewrite, and thus another renaming).
+These versions were never released, mostly because of laziness.
+
+Halloween is near again, and to celebrate the acquisition of my first Mac,
+I’m porting it yet another time. Enjoy.

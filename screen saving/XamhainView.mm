@@ -21,6 +21,7 @@
 
 #import "XamhainGLView.h"
 #include "XamhainPreferences.h"
+#import "XamhainUserDefaultsController.h"
 
 
 @implementation XamhainView
@@ -67,12 +68,13 @@
 
 - (BOOL) hasConfigureSheet
 {
-    return NO;
+    return YES;
 }
 
 - (NSWindow *) configureSheet
 {
-    return nil;
+    return [[XamhainUserDefaultsController sharedUserDefaultsController]
+            configureSheet];
 }
 
 @end

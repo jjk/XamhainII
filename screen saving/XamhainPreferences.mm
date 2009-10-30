@@ -22,50 +22,12 @@
 #include <algorithm>
 using namespace ::std;
 
-#import <ScreenSaver/ScreenSaverDefaults.h>
+#import "XamhainUserDefaultsController.h"
 
-
-@interface XamhainScreenSaverDefaults
-{
-    // empty
-}
-
-+ (NSUserDefaults *) sharedDefaults;
-
-@end
-
-namespace
-{
-    NSUserDefaults *gInstance = nil;
-}
-
-@implementation XamhainScreenSaverDefaults
-
-+ (void) initialize
-{
-    gInstance = [ScreenSaverDefaults defaultsForModuleWithName: @"de.earrame.XamhainII"];
-
-    // Load initial defaults and register them.
-    NSBundle *bundle = [NSBundle bundleWithIdentifier: @"de.earrame.XamhainII"];
-    NSString *path = [bundle pathForResource: @"defaults" ofType: @"plist"];
-    assert(path != nil);
-
-    NSDictionary *factoryDefaults = [NSDictionary dictionaryWithContentsOfFile: path];
-    assert(factoryDefaults != nil);
-
-    [gInstance registerDefaults: factoryDefaults];
-}
-
-+ (NSUserDefaults *) sharedDefaults
-{
-    return gInstance;
-}
-
-@end
 
 // Construct a preferences object - which is actually just a wrapper.
 XamhainPreferences::XamhainPreferences(void)
-:   mDefaults([XamhainScreenSaverDefaults sharedDefaults])
+:   mDefaults([[XamhainUserDefaultsController sharedUserDefaultsController] defaults])
 {
     // empty
 }

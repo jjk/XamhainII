@@ -26,8 +26,6 @@ class XamhainPreferences;
 
 @interface XamhainGLView : NSOpenGLView
 {
-    XamhainPreferences *mpPrefs; // user defaults
-
     KnotStyle *mpBroadStyle;     // knot styles
     KnotStyle *mpSlenderStyle;
 

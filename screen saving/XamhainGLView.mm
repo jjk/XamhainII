@@ -56,26 +56,13 @@ namespace
     return [[NSOpenGLPixelFormat alloc] initWithAttributes: attributes];
 }
 
-- (id) initWithFrame: (NSRect)frame
-{
-    self = [super initWithFrame: frame];
-    if (self) {
-        mpPrefs = new XamhainPreferences;
-
-        mpSlenderStyle = mpBroadStyle = 0;
-
-        mppKnots = 0;
-    }
-
-    return self;
-}
-
 - (void) startAnimation
 {
     mpBroadStyle = new KnotStyle("broad");
     mpSlenderStyle = new KnotStyle("slender");
 
-    mNumberOfKnots = mpPrefs->numberOfKnots();
+    XamhainPreferences prefs;
+    mNumberOfKnots = prefs.numberOfKnots();
     mppKnots = new RandomKnot *[mNumberOfKnots];
     fill(mppKnots, mppKnots + mNumberOfKnots, (RandomKnot *)0);
 }
@@ -93,13 +80,6 @@ namespace
     delete mpSlenderStyle;
     delete mpBroadStyle;
     mpSlenderStyle = mpBroadStyle = 0;
-}
-
-- (void) finalize
-{
-    delete mpPrefs;
-
-    [super finalize];
 }
 
 - (void) prepareOpenGL
@@ -142,12 +122,13 @@ namespace
         const NSSize size = [self bounds].size;
         const int width = size.width;
         const int height = size.height;
+        XamhainPreferences prefs;
 
         for (int i = 0; i < mNumberOfKnots; ++i) {
             if (!mppKnots[i]) {
                 // Determine knot style.
                 const KnotStyle &style =
-                randomFloat() < mpPrefs->broadKnotProbability()
+                randomFloat() < prefs.broadKnotProbability()
                 ? *mpBroadStyle
                 : *mpSlenderStyle;
 
@@ -155,11 +136,11 @@ namespace
                 KnotType type = kCircular;
                 GLfloat p = randomFloat();
 
-                if ((p -= mpPrefs->horizontalKnotProbability()) < 0.0) {
+                if ((p -= prefs.horizontalKnotProbability()) < 0.0) {
                     type = kHorizontal;
-                } else if ((p -= mpPrefs->verticalKnotProbability()) < 0.0) {
+                } else if ((p -= prefs.verticalKnotProbability()) < 0.0) {
                     type = kVertical;
-                } else if ((p -= mpPrefs->closedKnotProbability()) < 0.0) {
+                } else if ((p -= prefs.closedKnotProbability()) < 0.0) {
                     type = kClosed;
                 }
 

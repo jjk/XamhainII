@@ -49,7 +49,7 @@
 	<key>TicksPerSecond</key>
 	<integer>60</integer>
 	<key>VerticalKnotProbability</key>
-	<real>0.2</real>
+	<real>0.1</real>
 	<key>VerticalMirrorProbability</key>
 	<real>0.9</real>
 </dict>

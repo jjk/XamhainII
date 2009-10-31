@@ -52,6 +52,10 @@
 - (void) startAnimation
 {
     [super startAnimation];
+
+    XamhainPreferences prefs;
+    [self setAnimationTimeInterval: 1.0/prefs.ticksPerSecond()];
+
     [mpGLView startAnimation];
 }
 

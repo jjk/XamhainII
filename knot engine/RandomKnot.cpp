@@ -207,7 +207,7 @@ RandomKnot::prepareAnimation(Position extent, bool xRepeat, bool yRepeat)
     }
 
     // Give the knot a random speed, direction, angle and spin.
-    mSpeed = randomFloat(mPrefs.minSpeed(), mPrefs.maxSpeed());
+    mSpeed = randomFloat(mPrefs.minSpeed(), mPrefs.maxSpeed()) + 0.1;
 
     GLfloat dir;
     if (randomFloat() < mPrefs.skewProbability()) {

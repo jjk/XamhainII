@@ -516,17 +516,18 @@
 			files = (
 			);
 			inputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/XamhainII.saver",
+				"$(SRCROOT)/$(PROJECT_NAME)-orig.dmg",
+				"$(BUILT_PRODUCTS_DIR)/$(PROJECT_NAME).saver",
 				"$(SRCROOT)/COPYING",
 				"$(SRCROOT)/CREDITS",
 				"$(SRCROOT)/README",
 			);
 			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/XamhainII.dmg",
+				"$(BUILT_PRODUCTS_DIR)/$(PROJECT_NAME).dmg",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Thanks to Rob Mayoff for explaining how to do this.\n# See http://qwan.org/2007/05/22/using-xcode-to-build-a-disk-image-and-upload-a-web-site/\n\nset -ex\n\n[ \"$ACTION\" = build ] || exit 0\n[ \"$BUILD_VARIANTS\" = \"normal\" ] || exit 0\n\ndir=\"$TEMP_FILES_DIR/disk\"\ndmg=\"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.dmg\"\n\nrm -rf \"$dir\"\nmkdir \"$dir\"\ncp -R \"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.saver\" \"$dir\"\ncp -R \"$SRCROOT/COPYING\" \"$dir\"\ncp -R \"$SRCROOT/CREDITS\" \"$dir\"\ncp -R \"$SRCROOT/README\" \"$dir\"\nrm -f \"$dmg\"\nhdiutil create -srcfolder \"$dir\" -volname \"$PROJECT_NAME\" \"$dmg\"\nhdiutil internet-enable -yes \"$dmg\"\nrm -rf \"$dir\"\n";
+			shellScript = "# See http://jwz.livejournal.com/608927.html?thread=11477151#t11477151\n# for the basic idea behind this.  Originally based on a script by Rob Mayoff\n# which did it rather differently.\n\nset -ex\n\n[ \"$ACTION\" = build ] || exit 0\n[ \"$BUILD_VARIANTS\" = \"normal\" ] || exit 0\n\norig=\"$SRCROOT/misc/$PROJECT_NAME-orig.dmg\"\ndmg=\"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.dmg\"\nmnt=\"/Volumes/$PROJECT_NAME\"\n\n[ -e $mnt ] && exit 1\n\n# Attach the original image\nhdiutil attach -shadow $orig.shadow $orig\n\n# Copy files\nrsync -avE \"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.saver\" $mnt\ncp \"$SRCROOT/COPYING\" $mnt/Info\ncp \"$SRCROOT/CREDITS\" $mnt/Info\ncp \"$SRCROOT/README\"  $mnt/Info\n\n# Detach the image\nhdiutil detach $mnt\n\n# Now convert to a compressed read-only image\nhdiutil convert -ov -format UDZO -o $dmg -shadow $orig.shadow $orig\nhdiutil internet-enable -yes \"$dmg\"\nrm -f $orig.shadow\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

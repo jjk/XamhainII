@@ -6,7 +6,7 @@
 	};
 	00758B331089BA5B009D6C40 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 089C167EFE841241C02AAC07 /* English */;
+		fRef = 089C167EFE841241C02AAC07 /* en */;
 		name = "InfoPlist.strings: 17";
 		rLen = 0;
 		rLoc = 717;
@@ -261,7 +261,7 @@
 		userBuildSettings = {
 		};
 	};
-	089C167EFE841241C02AAC07 /* English */ = {
+	089C167EFE841241C02AAC07 /* en */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {856, 377}}";
 			sepNavSelRange = "{717, 0}";

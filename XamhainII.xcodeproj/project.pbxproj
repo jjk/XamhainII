@@ -24,6 +24,7 @@
 /* Begin PBXBuildFile section */
 		002438561098D6E100E8A351 /* KnotStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 002438541098D6E100E8A351 /* KnotStyle.cpp */; };
 		0032D326108A30770033FA87 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0032D325108A30770033FA87 /* OpenGL.framework */; };
+		004532EF10A5E5540073D7EA /* XamhainII.icns in Resources */ = {isa = PBXBuildFile; fileRef = 004532EE10A5E5540073D7EA /* XamhainII.icns */; };
 		00790DBF10996796007ABF04 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = 00790DBE10996796007ABF04 /* COPYING */; };
 		00791844108B081B00156D67 /* XamhainPreferences.mm in Sources */ = {isa = PBXBuildFile; fileRef = 00791842108B081B00156D67 /* XamhainPreferences.mm */; };
 		007C512B108A29BE00ED3242 /* RandomColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 007C5127108A29BE00ED3242 /* RandomColor.cpp */; };
@@ -110,6 +111,7 @@
 		002438531098D6E100E8A351 /* KnotStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KnotStyle.h; path = "knot engine/KnotStyle.h"; sourceTree = "<group>"; };
 		002438541098D6E100E8A351 /* KnotStyle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = KnotStyle.cpp; path = "knot engine/KnotStyle.cpp"; sourceTree = "<group>"; };
 		0032D325108A30770033FA87 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		004532EE10A5E5540073D7EA /* XamhainII.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = XamhainII.icns; path = misc/XamhainII.icns; sourceTree = "<group>"; };
 		00790DBE10996796007ABF04 /* COPYING */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = COPYING; sourceTree = "<group>"; };
 		00791842108B081B00156D67 /* XamhainPreferences.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = XamhainPreferences.mm; path = "screen saving/XamhainPreferences.mm"; sourceTree = "<group>"; };
 		00791843108B081B00156D67 /* XamhainPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XamhainPreferences.h; path = "screen saving/XamhainPreferences.h"; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				004532EE10A5E5540073D7EA /* XamhainII.icns */,
 				000AE53D109B57FC00DCDFD0 /* CREDITS */,
 				00926761109A0BF600B2EF52 /* defaults.plist */,
 				00790DBE10996796007ABF04 /* COPYING */,
@@ -494,6 +497,7 @@
 				00790DBF10996796007ABF04 /* COPYING in Resources */,
 				00926762109A0BF600B2EF52 /* defaults.plist in Resources */,
 				007CBA0310A596B6004F3B49 /* XamhainConfigureSheet.xib in Resources */,
+				004532EF10A5E5540073D7EA /* XamhainII.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,7 +531,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# See http://jwz.livejournal.com/608927.html?thread=11477151#t11477151\n# for the basic idea behind this.  Originally based on a script by Rob Mayoff\n# which did it rather differently.\n\nset -ex\n\n[ \"$ACTION\" = build ] || exit 0\n[ \"$BUILD_VARIANTS\" = \"normal\" ] || exit 0\n\norig=\"$SRCROOT/misc/$PROJECT_NAME-orig.dmg\"\ndmg=\"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.dmg\"\nmnt=\"/Volumes/$PROJECT_NAME\"\n\n[ -e $mnt ] && exit 1\n\n# Attach the original image\nhdiutil attach -shadow $orig.shadow $orig\n\n# Copy files\nrsync -avE \"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.saver\" $mnt\ncp \"$SRCROOT/COPYING\" $mnt/Info\ncp \"$SRCROOT/CREDITS\" $mnt/Info\ncp \"$SRCROOT/README\"  $mnt/Info\n\n# Detach the image\nhdiutil detach $mnt\n\n# Now convert to a compressed read-only image\nhdiutil convert -ov -format UDZO -o $dmg -shadow $orig.shadow $orig\nhdiutil internet-enable -yes \"$dmg\"\nrm -f $orig.shadow\n";
+			shellScript = "# See http://jwz.livejournal.com/608927.html?thread=11477151#t11477151\n# for the basic idea behind this.  Originally based on a script by Rob Mayoff\n# which did it rather differently.\n\nset -ex\n\n[ \"$ACTION\" = build ] || exit 0\n[ \"$BUILD_VARIANTS\" = \"normal\" ] || exit 0\n\norig=\"$SRCROOT/misc/$PROJECT_NAME-orig.dmg\"\ndmg=\"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.dmg\"\nmnt=\"/Volumes/$PROJECT_NAME\"\n\n[ -e $mnt ] && exit 1\n\n# Attach the original image\nhdiutil attach -shadow $orig.shadow $orig\n\n# Copy files\nrsync -avE \"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.saver\" $mnt\ncp \"$SRCROOT/COPYING\" $mnt/Info\ncp \"$SRCROOT/CREDITS\" $mnt/Info\ncp \"$SRCROOT/README\"  $mnt/Info\n\n# Detach the image\nhdiutil detach $mnt\n\n# Now convert to a compressed read-only image\nhdiutil convert -ov -format UDZO -o $dmg -shadow $orig.shadow $orig\nrm -f $orig.shadow\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

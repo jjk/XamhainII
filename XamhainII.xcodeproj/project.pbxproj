@@ -19,12 +19,41 @@
 			name = XamhainII.dmg;
 			productName = XamhainII.dmg;
 		};
+		007917BB10C26BF300D2916C /* All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 007917C610C26C2D00D2916C /* Build configuration list for PBXAggregateTarget "All" */;
+			buildPhases = (
+			);
+			dependencies = (
+				0077D95710C2E7EF002BDDAB /* PBXTargetDependency */,
+				007917C110C26C0300D2916C /* PBXTargetDependency */,
+				007917C310C26C0300D2916C /* PBXTargetDependency */,
+				007917C510C26C0300D2916C /* PBXTargetDependency */,
+			);
+			name = All;
+			productName = All;
+		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
 		002438561098D6E100E8A351 /* KnotStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 002438541098D6E100E8A351 /* KnotStyle.cpp */; };
 		0032D326108A30770033FA87 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0032D325108A30770033FA87 /* OpenGL.framework */; };
 		004532EF10A5E5540073D7EA /* XamhainII.icns in Resources */ = {isa = PBXBuildFile; fileRef = 004532EE10A5E5540073D7EA /* XamhainII.icns */; };
+		0065BEFF10C0531E00CF6F59 /* SMDoubleSlider.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = 0065BEF610C0531E00CF6F59 /* SMDoubleSlider.classdescription */; };
+		0065BF0010C0531E00CF6F59 /* SMDoubleSlider+IBPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0065BEF810C0531E00CF6F59 /* SMDoubleSlider+IBPlugin.m */; };
+		0065BF0110C0531E00CF6F59 /* SMDoubleSliderIB3Inspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 0065BEFA10C0531E00CF6F59 /* SMDoubleSliderIB3Inspector.m */; };
+		0065BF0210C0531E00CF6F59 /* SMDoubleSliderIB3Inspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = 0065BEFB10C0531E00CF6F59 /* SMDoubleSliderIB3Inspector.nib */; };
+		0065BF0310C0531E00CF6F59 /* SMDoubleSliderIB3Library.nib in Resources */ = {isa = PBXBuildFile; fileRef = 0065BEFC10C0531E00CF6F59 /* SMDoubleSliderIB3Library.nib */; };
+		0065BF0410C0531E00CF6F59 /* SMDoubleSliderIB3Plugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0065BEFE10C0531E00CF6F59 /* SMDoubleSliderIB3Plugin.m */; };
+		0065BF0F10C053F200CF6F59 /* InterfaceBuilderKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0065BF0E10C053F200CF6F59 /* InterfaceBuilderKit.framework */; };
+		0077D95810C2E82F002BDDAB /* SMDoubleSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 007FA69B10C04C63003FB309 /* SMDoubleSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0077D95910C2E82F002BDDAB /* SMDoubleSliderCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 007FA69D10C04C63003FB309 /* SMDoubleSliderCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0077D95A10C2E8A4002BDDAB /* SMDoubleSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 007FA69C10C04C63003FB309 /* SMDoubleSlider.m */; };
+		0077D95B10C2E8A4002BDDAB /* SMDoubleSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 007FA69E10C04C63003FB309 /* SMDoubleSliderCell.m */; };
+		0077D95D10C2E8B7002BDDAB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0077D95C10C2E8B7002BDDAB /* Cocoa.framework */; };
+		0077D99A10C2E9C4002BDDAB /* SMDoubleSliderIB3Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0077D95110C2E7E7002BDDAB /* SMDoubleSliderIB3Framework.framework */; };
+		0077D9BF10C2EA65002BDDAB /* SMDoubleSliderIB3Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0077D95110C2E7E7002BDDAB /* SMDoubleSliderIB3Framework.framework */; };
+		0077D9C410C2EA6B002BDDAB /* SMDoubleSliderIB3Framework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0077D95110C2E7E7002BDDAB /* SMDoubleSliderIB3Framework.framework */; };
 		00790DBF10996796007ABF04 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = 00790DBE10996796007ABF04 /* COPYING */; };
 		00791844108B081B00156D67 /* XamhainPreferences.mm in Sources */ = {isa = PBXBuildFile; fileRef = 00791842108B081B00156D67 /* XamhainPreferences.mm */; };
 		007C512B108A29BE00ED3242 /* RandomColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 007C5127108A29BE00ED3242 /* RandomColor.cpp */; };
@@ -100,7 +129,62 @@
 			remoteGlobalIDString = 8D255AC50486D3F9007BF209;
 			remoteInfo = XamhainII;
 		};
+		0077D95610C2E7EF002BDDAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0077D95010C2E7E7002BDDAB;
+			remoteInfo = SMDoubleSliderIB3Framework;
+		};
+		0077D99810C2E9BC002BDDAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0077D95010C2E7E7002BDDAB;
+			remoteInfo = SMDoubleSliderIB3Framework;
+		};
+		0077D9BD10C2EA5E002BDDAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0077D95010C2E7E7002BDDAB;
+			remoteInfo = SMDoubleSliderIB3Framework;
+		};
+		007917C010C26C0300D2916C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0065BEE610C0525B00CF6F59;
+			remoteInfo = SMDoubleSlider.ibplugin;
+		};
+		007917C210C26C0300D2916C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D255AC50486D3F9007BF209;
+			remoteInfo = XamhainII;
+		};
+		007917C410C26C0300D2916C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 000D03D61089C45F003F010E;
+			remoteInfo = XamhainII.dmg;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		007FA67F10C0491F003FB309 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0077D9C410C2EA6B002BDDAB /* SMDoubleSliderIB3Framework.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		000AE53A109B577E00DCDFD0 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
@@ -112,6 +196,20 @@
 		002438541098D6E100E8A351 /* KnotStyle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = KnotStyle.cpp; path = "knot engine/KnotStyle.cpp"; sourceTree = "<group>"; };
 		0032D325108A30770033FA87 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		004532EE10A5E5540073D7EA /* XamhainII.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = XamhainII.icns; path = misc/XamhainII.icns; sourceTree = "<group>"; };
+		0065BEE710C0525B00CF6F59 /* SMDoubleSlider.ibplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMDoubleSlider.ibplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		0065BEF610C0531E00CF6F59 /* SMDoubleSlider.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.ibClassDescription; name = SMDoubleSlider.classdescription; path = SMDoubleSlider/IB_Plugin_code/SMDoubleSlider.classdescription; sourceTree = "<group>"; };
+		0065BEF710C0531E00CF6F59 /* SMDoubleSlider+IBPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SMDoubleSlider+IBPlugin.h"; path = "SMDoubleSlider/IB_Plugin_code/SMDoubleSlider+IBPlugin.h"; sourceTree = "<group>"; };
+		0065BEF810C0531E00CF6F59 /* SMDoubleSlider+IBPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SMDoubleSlider+IBPlugin.m"; path = "SMDoubleSlider/IB_Plugin_code/SMDoubleSlider+IBPlugin.m"; sourceTree = "<group>"; };
+		0065BEF910C0531E00CF6F59 /* SMDoubleSliderIB3Inspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMDoubleSliderIB3Inspector.h; path = SMDoubleSlider/IB_Plugin_code/SMDoubleSliderIB3Inspector.h; sourceTree = "<group>"; };
+		0065BEFA10C0531E00CF6F59 /* SMDoubleSliderIB3Inspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMDoubleSliderIB3Inspector.m; path = SMDoubleSlider/IB_Plugin_code/SMDoubleSliderIB3Inspector.m; sourceTree = "<group>"; };
+		0065BEFB10C0531E00CF6F59 /* SMDoubleSliderIB3Inspector.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = SMDoubleSliderIB3Inspector.nib; path = SMDoubleSlider/IB_Plugin_code/SMDoubleSliderIB3Inspector.nib; sourceTree = "<group>"; };
+		0065BEFC10C0531E00CF6F59 /* SMDoubleSliderIB3Library.nib */ = {isa = PBXFileReference; explicitFileType = file; name = SMDoubleSliderIB3Library.nib; path = SMDoubleSlider/IB_Plugin_code/SMDoubleSliderIB3Library.nib; sourceTree = "<group>"; };
+		0065BEFD10C0531E00CF6F59 /* SMDoubleSliderIB3Plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMDoubleSliderIB3Plugin.h; path = SMDoubleSlider/IB_Plugin_code/SMDoubleSliderIB3Plugin.h; sourceTree = "<group>"; };
+		0065BEFE10C0531E00CF6F59 /* SMDoubleSliderIB3Plugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMDoubleSliderIB3Plugin.m; path = SMDoubleSlider/IB_Plugin_code/SMDoubleSliderIB3Plugin.m; sourceTree = "<group>"; };
+		0065BF0810C0535300CF6F59 /* Info-IB_Plugin.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Info-IB_Plugin.plist"; path = "SMDoubleSlider/IB_Plugin_code/Info-IB_Plugin.plist"; sourceTree = "<group>"; };
+		0065BF0E10C053F200CF6F59 /* InterfaceBuilderKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilderKit.framework; path = Library/Frameworks/InterfaceBuilderKit.framework; sourceTree = DEVELOPER_DIR; };
+		0077D95110C2E7E7002BDDAB /* SMDoubleSliderIB3Framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SMDoubleSliderIB3Framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0077D95C10C2E8B7002BDDAB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		00790DBE10996796007ABF04 /* COPYING */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = COPYING; sourceTree = "<group>"; };
 		00791842108B081B00156D67 /* XamhainPreferences.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = XamhainPreferences.mm; path = "screen saving/XamhainPreferences.mm"; sourceTree = "<group>"; };
 		00791843108B081B00156D67 /* XamhainPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XamhainPreferences.h; path = "screen saving/XamhainPreferences.h"; sourceTree = "<group>"; };
@@ -133,6 +231,11 @@
 		007ED8631090CD6800B01235 /* TiledKnot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiledKnot.h; path = "knot engine/TiledKnot.h"; sourceTree = "<group>"; };
 		007ED8641090CD6800B01235 /* VerticalKnot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VerticalKnot.cpp; path = "knot engine/VerticalKnot.cpp"; sourceTree = "<group>"; };
 		007ED8651090CD6800B01235 /* VerticalKnot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VerticalKnot.h; path = "knot engine/VerticalKnot.h"; sourceTree = "<group>"; };
+		007FA69B10C04C63003FB309 /* SMDoubleSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMDoubleSlider.h; path = SMDoubleSlider/Framework_code/SMDoubleSlider.h; sourceTree = "<group>"; };
+		007FA69C10C04C63003FB309 /* SMDoubleSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMDoubleSlider.m; path = SMDoubleSlider/Framework_code/SMDoubleSlider.m; sourceTree = "<group>"; };
+		007FA69D10C04C63003FB309 /* SMDoubleSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMDoubleSliderCell.h; path = SMDoubleSlider/Framework_code/SMDoubleSliderCell.h; sourceTree = "<group>"; };
+		007FA69E10C04C63003FB309 /* SMDoubleSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMDoubleSliderCell.m; path = SMDoubleSlider/Framework_code/SMDoubleSliderCell.m; sourceTree = "<group>"; };
+		007FA6A410C04C92003FB309 /* SMDoubleSliderIB3Framework-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "SMDoubleSliderIB3Framework-Info.plist"; path = "SMDoubleSlider/Framework_code/SMDoubleSliderIB3Framework-Info.plist"; sourceTree = "<group>"; };
 		00926761109A0BF600B2EF52 /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defaults.plist; sourceTree = "<group>"; };
 		0096345B109B5B6700B26FC2 /* XamhainUserDefaultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XamhainUserDefaultsController.h; path = "screen saving/XamhainUserDefaultsController.h"; sourceTree = "<group>"; };
 		0096345C109B5B6700B26FC2 /* XamhainUserDefaultsController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = XamhainUserDefaultsController.mm; path = "screen saving/XamhainUserDefaultsController.mm"; sourceTree = "<group>"; };
@@ -199,10 +302,28 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0065BEE510C0525B00CF6F59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0077D99A10C2E9C4002BDDAB /* SMDoubleSliderIB3Framework.framework in Frameworks */,
+				0065BF0F10C053F200CF6F59 /* InterfaceBuilderKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0077D94F10C2E7E7002BDDAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0077D95D10C2E8B7002BDDAB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D255ACD0486D3F9007BF209 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0077D9BF10C2EA65002BDDAB /* SMDoubleSliderIB3Framework.framework in Frameworks */,
 				8D255ACE0486D3F9007BF209 /* Cocoa.framework in Frameworks */,
 				8D255ACF0486D3F9007BF209 /* ScreenSaver.framework in Frameworks */,
 				0032D326108A30770033FA87 /* OpenGL.framework in Frameworks */,
@@ -212,6 +333,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0065BEF310C052D400CF6F59 /* IB Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				0065BF0810C0535300CF6F59 /* Info-IB_Plugin.plist */,
+				0065BEF610C0531E00CF6F59 /* SMDoubleSlider.classdescription */,
+				0065BEF710C0531E00CF6F59 /* SMDoubleSlider+IBPlugin.h */,
+				0065BEF810C0531E00CF6F59 /* SMDoubleSlider+IBPlugin.m */,
+				0065BEF910C0531E00CF6F59 /* SMDoubleSliderIB3Inspector.h */,
+				0065BEFA10C0531E00CF6F59 /* SMDoubleSliderIB3Inspector.m */,
+				0065BEFB10C0531E00CF6F59 /* SMDoubleSliderIB3Inspector.nib */,
+				0065BEFC10C0531E00CF6F59 /* SMDoubleSliderIB3Library.nib */,
+				0065BEFD10C0531E00CF6F59 /* SMDoubleSliderIB3Plugin.h */,
+				0065BEFE10C0531E00CF6F59 /* SMDoubleSliderIB3Plugin.m */,
+			);
+			name = "IB Plugin";
+			sourceTree = "<group>";
+		};
 		007C5125108A299800ED3242 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +359,28 @@
 				007C5129108A29BE00ED3242 /* RandomNumbers.h */,
 			);
 			name = Utility;
+			sourceTree = "<group>";
+		};
+		007FA68810C0499E003FB309 /* SMDoubleSlider */ = {
+			isa = PBXGroup;
+			children = (
+				007FA76410C04EF4003FB309 /* Framework */,
+				0065BEF310C052D400CF6F59 /* IB Plugin */,
+			);
+			name = SMDoubleSlider;
+			sourceTree = "<group>";
+		};
+		007FA76410C04EF4003FB309 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				007FA6A410C04C92003FB309 /* SMDoubleSliderIB3Framework-Info.plist */,
+				007FA69B10C04C63003FB309 /* SMDoubleSlider.h */,
+				007FA69C10C04C63003FB309 /* SMDoubleSlider.m */,
+				007FA69D10C04C63003FB309 /* SMDoubleSliderCell.h */,
+				007FA69E10C04C63003FB309 /* SMDoubleSliderCell.m */,
+				0077D95C10C2E8B7002BDDAB /* Cocoa.framework */,
+			);
+			name = Framework;
 			sourceTree = "<group>";
 		};
 		009D8961108E24ED00A416CF /* Knot Engine */ = {
@@ -322,6 +482,7 @@
 		089C166AFE841209C02AAC07 /* XamhainII */ = {
 			isa = PBXGroup;
 			children = (
+				007FA68810C0499E003FB309 /* SMDoubleSlider */,
 				009D8961108E24ED00A416CF /* Knot Engine */,
 				00DA7833107A72F00094FCAB /* Screen Saving */,
 				007C5125108A299800ED3242 /* Utility */,
@@ -373,6 +534,7 @@
 			children = (
 				089C1672FE841209C02AAC07 /* Foundation.framework */,
 				089C167FFE841241C02AAC07 /* AppKit.framework */,
+				0065BF0E10C053F200CF6F59 /* InterfaceBuilderKit.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
@@ -381,6 +543,8 @@
 			isa = PBXGroup;
 			children = (
 				8D255AD30486D3F9007BF209 /* XamhainII.saver */,
+				0065BEE710C0525B00CF6F59 /* SMDoubleSlider.ibplugin */,
+				0077D95110C2E7E7002BDDAB /* SMDoubleSliderIB3Framework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -396,29 +560,68 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		8D255AC60486D3F9007BF209 /* Headers */ = {
+		0077D94C10C2E7E7002BDDAB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0077D95810C2E82F002BDDAB /* SMDoubleSlider.h in Headers */,
+				0077D95910C2E82F002BDDAB /* SMDoubleSliderCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8D255AC50486D3F9007BF209 /* XamhainII */ = {
+		0065BEE610C0525B00CF6F59 /* SMDoubleSlider.ibplugin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EF7AD72D08BB986600CE4634 /* Build configuration list for PBXNativeTarget "XamhainII" */;
+			buildConfigurationList = 0065BEEB10C0525C00CF6F59 /* Build configuration list for PBXNativeTarget "SMDoubleSlider.ibplugin" */;
 			buildPhases = (
-				8D255AC60486D3F9007BF209 /* Headers */,
-				8D255AC90486D3F9007BF209 /* Resources */,
-				8D255ACB0486D3F9007BF209 /* Sources */,
-				8D255ACD0486D3F9007BF209 /* Frameworks */,
-				8D255AD00486D3F9007BF209 /* Rez */,
+				0065BEE310C0525B00CF6F59 /* Resources */,
+				0065BEE410C0525B00CF6F59 /* Sources */,
+				0065BEE510C0525B00CF6F59 /* Frameworks */,
+				00B7E53B10CA6674009BC002 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0077D99910C2E9BC002BDDAB /* PBXTargetDependency */,
+			);
+			name = SMDoubleSlider.ibplugin;
+			productName = SMDoubleSlider.ibplugin;
+			productReference = 0065BEE710C0525B00CF6F59 /* SMDoubleSlider.ibplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		0077D95010C2E7E7002BDDAB /* SMDoubleSliderIB3Framework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0077D95510C2E7E7002BDDAB /* Build configuration list for PBXNativeTarget "SMDoubleSliderIB3Framework" */;
+			buildPhases = (
+				0077D94C10C2E7E7002BDDAB /* Headers */,
+				0077D94D10C2E7E7002BDDAB /* Resources */,
+				0077D94E10C2E7E7002BDDAB /* Sources */,
+				0077D94F10C2E7E7002BDDAB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SMDoubleSliderIB3Framework;
+			productName = SMDoubleSliderIB3Framework;
+			productReference = 0077D95110C2E7E7002BDDAB /* SMDoubleSliderIB3Framework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8D255AC50486D3F9007BF209 /* XamhainII */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF7AD72D08BB986600CE4634 /* Build configuration list for PBXNativeTarget "XamhainII" */;
+			buildPhases = (
+				8D255AC90486D3F9007BF209 /* Resources */,
+				8D255ACB0486D3F9007BF209 /* Sources */,
+				8D255ACD0486D3F9007BF209 /* Frameworks */,
+				007FA67F10C0491F003FB309 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0077D9BE10C2EA5E002BDDAB /* PBXTargetDependency */,
 			);
 			name = XamhainII;
 			productInstallPath = "$(HOME)/Library/Screen Savers";
@@ -438,6 +641,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				007917BB10C26BF300D2916C /* All */,
+				0077D95010C2E7E7002BDDAB /* SMDoubleSliderIB3Framework */,
+				0065BEE610C0525B00CF6F59 /* SMDoubleSlider.ibplugin */,
 				8D255AC50486D3F9007BF209 /* XamhainII */,
 				000D03D61089C45F003F010E /* XamhainII.dmg */,
 			);
@@ -445,6 +651,23 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0065BEE310C0525B00CF6F59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0065BEFF10C0531E00CF6F59 /* SMDoubleSlider.classdescription in Resources */,
+				0065BF0210C0531E00CF6F59 /* SMDoubleSliderIB3Inspector.nib in Resources */,
+				0065BF0310C0531E00CF6F59 /* SMDoubleSliderIB3Library.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0077D94D10C2E7E7002BDDAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D255AC90486D3F9007BF209 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -503,16 +726,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXRezBuildPhase section */
-		8D255AD00486D3F9007BF209 /* Rez */ = {
-			isa = PBXRezBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXRezBuildPhase section */
-
 /* Begin PBXShellScriptBuildPhase section */
 		000D03D51089C45F003F010E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -533,9 +746,41 @@
 			shellPath = /bin/sh;
 			shellScript = "# See http://jwz.livejournal.com/608927.html?thread=11477151#t11477151\n# for the basic idea behind this.  Originally based on a script by Rob Mayoff\n# which did it rather differently.\n\nset -ex\n\n[ \"$ACTION\" = build ] || exit 0\n[ \"$BUILD_VARIANTS\" = \"normal\" ] || exit 0\n\norig=\"$SRCROOT/misc/$PROJECT_NAME-orig.dmg\"\ndmg=\"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.dmg\"\nmnt=\"/Volumes/$PROJECT_NAME\"\n\n[ -e $mnt ] && exit 1\n\n# Attach the original image\nhdiutil attach -shadow $orig.shadow $orig\n\n# Copy files\nrsync -avE \"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.saver\" $mnt\ncp \"$SRCROOT/COPYING\" $mnt/Info\ncp \"$SRCROOT/CREDITS\" $mnt/Info\ncp \"$SRCROOT/README\"  $mnt/Info\n\n# Detach the image\nhdiutil detach $mnt\n\n# Now convert to a compressed read-only image\nhdiutil convert -ov -format UDZO -o $dmg -shadow $orig.shadow $orig\nrm -f $orig.shadow\n";
 		};
+		00B7E53B10CA6674009BC002 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# The plugin is built inside the framework's 'Resources' directory, and its symbol file\n# is also placed there.  Move it out so it won't cause problems later.\n\n# If it already exists, remove the old dSYM file from the build/${Config} folder\nFILE=\"${BUILD_DIR}/${BUILD_STYLE}/${DWARF_DSYM_FILE_NAME}\"\nif test -e \"${FILE}\"\nthen\n\techo \"rm -R \\\"${FILE}\\\"\"\n\trm -R \"${FILE}\"\nfi\n\n# If the dSYM file exists, move the dSYM file out of the framework and into the build/${Config} folder\nFILE=\"${DWARF_DSYM_FOLDER_PATH}${DWARF_DSYM_FILE_NAME}\"\nif test -e \"${FILE}\"\nthen\n\techo \"mv \\\"${FILE}\\\" \\\"${BUILD_DIR}/${BUILD_STYLE}/\\\"\"\n\tmv \"${FILE}\" \"${BUILD_DIR}/${BUILD_STYLE}/\"\nfi";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0065BEE410C0525B00CF6F59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0065BF0010C0531E00CF6F59 /* SMDoubleSlider+IBPlugin.m in Sources */,
+				0065BF0110C0531E00CF6F59 /* SMDoubleSliderIB3Inspector.m in Sources */,
+				0065BF0410C0531E00CF6F59 /* SMDoubleSliderIB3Plugin.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0077D94E10C2E7E7002BDDAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0077D95A10C2E8A4002BDDAB /* SMDoubleSlider.m in Sources */,
+				0077D95B10C2E8A4002BDDAB /* SMDoubleSliderCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D255ACB0486D3F9007BF209 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -566,6 +811,36 @@
 			isa = PBXTargetDependency;
 			target = 8D255AC50486D3F9007BF209 /* XamhainII */;
 			targetProxy = 000D03D91089C465003F010E /* PBXContainerItemProxy */;
+		};
+		0077D95710C2E7EF002BDDAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0077D95010C2E7E7002BDDAB /* SMDoubleSliderIB3Framework */;
+			targetProxy = 0077D95610C2E7EF002BDDAB /* PBXContainerItemProxy */;
+		};
+		0077D99910C2E9BC002BDDAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0077D95010C2E7E7002BDDAB /* SMDoubleSliderIB3Framework */;
+			targetProxy = 0077D99810C2E9BC002BDDAB /* PBXContainerItemProxy */;
+		};
+		0077D9BE10C2EA5E002BDDAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0077D95010C2E7E7002BDDAB /* SMDoubleSliderIB3Framework */;
+			targetProxy = 0077D9BD10C2EA5E002BDDAB /* PBXContainerItemProxy */;
+		};
+		007917C110C26C0300D2916C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0065BEE610C0525B00CF6F59 /* SMDoubleSlider.ibplugin */;
+			targetProxy = 007917C010C26C0300D2916C /* PBXContainerItemProxy */;
+		};
+		007917C310C26C0300D2916C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D255AC50486D3F9007BF209 /* XamhainII */;
+			targetProxy = 007917C210C26C0300D2916C /* PBXContainerItemProxy */;
+		};
+		007917C510C26C0300D2916C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 000D03D61089C45F003F010E /* XamhainII.dmg */;
+			targetProxy = 007917C410C26C0300D2916C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -610,6 +885,145 @@
 			};
 			name = Release;
 		};
+		0065BEE910C0525B00CF6F59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(BUILD_DIR)/$(CONFIGURATION)\"",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "SMDoubleSlider/IB_Plugin_code/Info-IB_Plugin.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../../../../../../..";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = SMDoubleSlider;
+				WRAPPER_EXTENSION = ibplugin;
+			};
+			name = Debug;
+		};
+		0065BEEA10C0525B00CF6F59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SMDoubleSliderIB3Framework.framework/Resources/";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(BUILD_DIR)/$(CONFIGURATION)\"",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "SMDoubleSlider/IB_Plugin_code/Info-IB_Plugin.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../../../../../../..";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = SMDoubleSlider;
+				WRAPPER_EXTENSION = ibplugin;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		0077D95310C2E7E7002BDDAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "SMDoubleSlider/Framework_code/SMDoubleSliderIB3Framework-Info.plist";
+				INSTALL_PATH = "@rpath";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = SMDoubleSliderIB3Framework;
+			};
+			name = Debug;
+		};
+		0077D95410C2E7E7002BDDAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "SMDoubleSlider/Framework_code/SMDoubleSliderIB3Framework-Info.plist";
+				INSTALL_PATH = "@rpath";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = SMDoubleSliderIB3Framework;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		007917BC10C26BF300D2916C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = All;
+			};
+			name = Debug;
+		};
+		007917BD10C26BF300D2916C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = All;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		EF7AD72E08BB986600CE4634 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -648,6 +1062,7 @@
 				GCC_WARN_UNUSED_VALUE = YES;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_NAME = XamhainII;
 				WRAPPER_EXTENSION = saver;
 				ZERO_LINK = YES;
@@ -688,6 +1103,7 @@
 				GCC_WARN_UNUSED_VALUE = YES;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_NAME = XamhainII;
 				WRAPPER_EXTENSION = saver;
 			};
@@ -704,6 +1120,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PREBINDING = NO;
 				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Debug;
 		};
@@ -717,6 +1134,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Release;
 		};
@@ -728,6 +1146,33 @@
 			buildConfigurations = (
 				000D03D71089C45F003F010E /* Debug */,
 				000D03D81089C45F003F010E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0065BEEB10C0525C00CF6F59 /* Build configuration list for PBXNativeTarget "SMDoubleSlider.ibplugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0065BEE910C0525B00CF6F59 /* Debug */,
+				0065BEEA10C0525B00CF6F59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0077D95510C2E7E7002BDDAB /* Build configuration list for PBXNativeTarget "SMDoubleSliderIB3Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0077D95310C2E7E7002BDDAB /* Debug */,
+				0077D95410C2E7E7002BDDAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		007917C610C26C2D00D2916C /* Build configuration list for PBXAggregateTarget "All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				007917BC10C26BF300D2916C /* Debug */,
+				007917BD10C26BF300D2916C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

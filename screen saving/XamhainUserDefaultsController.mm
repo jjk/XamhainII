@@ -45,28 +45,30 @@ namespace
 
 + (void) initialize
 {
-    // THIS is causing all the trouble.
-    NSUserDefaults *defaults = [ScreenSaverDefaults defaultsForModuleWithName: kBundleName];
+    if (self == [XamhainUserDefaultsController class]) {
+        // THIS is causing all the trouble.
+        NSUserDefaults *defaults = [ScreenSaverDefaults defaultsForModuleWithName: kBundleName];
 
-    // Load initial defaults and register them.
-    NSBundle *bundle = [NSBundle bundleWithIdentifier: kBundleName];
-    NSString *path = [bundle pathForResource: @"defaults" ofType: @"plist"];
-    assert(path != nil);
+        // Load initial defaults and register them.
+        NSBundle *bundle = [NSBundle bundleWithIdentifier: kBundleName];
+        NSString *path = [bundle pathForResource: @"defaults" ofType: @"plist"];
+        assert(path != nil);
 
-    NSDictionary *factoryDefaults = [NSDictionary dictionaryWithContentsOfFile: path];
-    assert(factoryDefaults != nil);
+        NSDictionary *factoryDefaults = [NSDictionary dictionaryWithContentsOfFile: path];
+        assert(factoryDefaults != nil);
 
-    [defaults registerDefaults: factoryDefaults];
+        [defaults registerDefaults: factoryDefaults];
 
-    // Create the shared user defaults controller.
-    gpInstance = [[XamhainUserDefaultsController alloc]
-                  initWithDefaults: defaults
-                  initialValues: factoryDefaults];
-    [gpInstance setAppliesImmediately: NO];
+        // Create the shared user defaults controller.
+        gpInstance = [[XamhainUserDefaultsController alloc]
+                      initWithDefaults: defaults
+                      initialValues: factoryDefaults];
+        [gpInstance setAppliesImmediately: NO];
 
-    // Load our nib file.
-    gpInstance->mpNib = [[NSNib alloc] initWithNibNamed: @"XamhainConfigureSheet"
-                                                 bundle: bundle];
+        // Load our nib file.
+        gpInstance->mpNib = [[NSNib alloc] initWithNibNamed: @"XamhainConfigureSheet"
+                                                     bundle: bundle];
+    }
 }
 
 + (id) sharedUserDefaultsController

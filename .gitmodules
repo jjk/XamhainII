@@ -1,0 +1,3 @@
+[submodule "SMDoubleSlider"]
+	path = SMDoubleSlider
+	url = git://github.com/jjk/SMDoubleSlider
